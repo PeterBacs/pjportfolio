@@ -1,0 +1,289 @@
+{
+  "slug": "retina",
+  "name": "RETINA",
+  "fullTitle": "RETINA: Multifractal Modeling of Retinal Vascular Networks",
+  "acronymNote": "",
+  "summary": "A web-based research prototype that measures the structural complexity of the blood-vessel network in a retinal fundus photograph and combines the measurements into a single Microvascular Abnormality Index.",
+  "status": "Research prototype",
+  "statusGroup": "Research prototype",
+  "year": null,
+  "role": "Researcher and developer",
+  "roleBasis": "inferred",
+  "involvement": "Personal project",
+  "result": "Produces D, Δα, FD, MD and MAI for an uploaded image and shows every calculation step by step.",
+  "tags": [
+    "Python",
+    "OpenCV",
+    "Fractal analysis",
+    "Flask"
+  ],
+  "tech": [
+    "Python",
+    "OpenCV",
+    "Fractal analysis",
+    "Flask",
+    "Random Forest",
+    "SQLite"
+  ],
+  "keywords": "retinal fundus vessel segmentation box counting multifractal microvascular abnormality index mathematics research medical imaging data science feature engineering analytical model statistics python numpy",
+  "featuredOrder": 2,
+  "thumbnail": "thumb-retina",
+  "docs": [
+    {
+      "id": "doc-retina",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [
+    "retina-demo"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "RETINA studies the branching pattern of retinal blood vessels using fractal mathematics. For an uploaded fundus image it measures a global fractal dimension (D) that describes the overall complexity of the vessel network, and local fractal values across 16 image regions that show how that complexity varies. The spread of the local values (Δα) is combined with D into a Microvascular Abnormality Index (MAI) that expresses how far the network departs from a healthy reference."
+        },
+        {
+          "type": "p",
+          "text": "It is intended as a research and teaching tool for people studying vascular structure, and it is explicitly not a clinical diagnostic."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "title": "Problem and research questions",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Changes in the branching of retinal vessels may indicate microvascular abnormality, but they are hard to identify and measure by visual inspection alone. The study frames this as a measurement problem and asks:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "How do healthy and abnormal vascular networks differ in vessel density (P), fractal dimension (D), local fractal dimensions (αᵢ) and multifractal spread (Δα)?",
+            "Are those differences statistically significant, and are the measures related to one another?",
+            "How can global complexity and local heterogeneity be combined into one index (MAI)?",
+            "Does the MAI distinguish healthy from abnormal networks better than existing mathematical measures?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Language and web stack",
+              "Python with a Flask web application (18 routes). JavaScript runs the upload interface and the 12-step animated simulation, which only plays back values computed in Python."
+            ],
+            [
+              "Image processing",
+              "OpenCV: resize, green-channel extraction, CLAHE (clip limit 2.0, 8×8 tiles), Gaussian blur, black-hat morphology and thresholding. An optional manual threshold slider re-runs the real analysis."
+            ],
+            [
+              "Mathematical analysis",
+              "NumPy: global box-counting dimension D from a least-squares fit of ln N(ε) against ln(1/ε), reported with R². A 4×4 grid gives 16 regions with local box sizes of 16, 8, 4 and 2 pixels, then the multifractal spread Δα, FD, MD and MAI."
+            ],
+            [
+              "Statistics",
+              "SciPy: Pearson and Spearman correlations with p-values and r². z-score standardisation of deviations (MAIz). ROC / Youden's J cutoff from the user's labelled analyses."
+            ],
+            [
+              "Machine learning",
+              "scikit-learn pipeline: StandardScaler and a Random Forest (200 trees, maximum depth 4, balanced class weights). Evaluated with stratified k-fold cross-validation (fixed random seed 42) for accuracy, precision, recall, F1 and a confusion matrix. Retrained from the current database on each use."
+            ],
+            [
+              "Data and outputs",
+              "SQLite with analysis_results, healthy_reference and validated_threshold tables, plus CSV export. Matplotlib graphs and heatmaps, ReportLab PDF reports, and MP4 export of the simulation with OpenCV."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements and constraints",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Transparency: each reported number is computed once in Python. The browser animation only plays back stored values and never recomputes or randomises them.",
+            "No hard-coded norms: healthy reference values (D<sub>H</sub>, Δα<sub>H</sub> and their spreads) are derived from uploaded healthy images. Without reference images, D and Δα are still reported, but FD, MD and MAI are withheld.",
+            "Non-diagnostic scope: the MAI is a structural deviation from a reference, not a disease probability, and no disease thresholds are built in.",
+            "Input: JPG, JPEG or PNG fundus images."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "System architecture",
+      "blocks": [
+        {
+          "type": "flow",
+          "caption": "",
+          "steps": [
+            {
+              "label": "Retinal image",
+              "detail": "JPG / PNG upload"
+            },
+            {
+              "label": "Preprocessing",
+              "detail": "Resize, green channel, CLAHE, Gaussian blur"
+            },
+            {
+              "label": "Vessel segmentation",
+              "detail": "Black-hat morphology and thresholding → binary map"
+            },
+            {
+              "label": "Global analysis",
+              "detail": "Box-counting fractal dimension D"
+            },
+            {
+              "label": "Local analysis",
+              "detail": "16 regions → density and local α; spread Δα"
+            },
+            {
+              "label": "Reference comparison",
+              "detail": "D<sub>H</sub> and Δα<sub>H</sub> from healthy images"
+            },
+            {
+              "label": "MAI",
+              "detail": "Combines FD and MD"
+            },
+            {
+              "label": "Outputs",
+              "detail": "Dashboard, history, PDF report, 12-step simulation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Implementation",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The application is a Flask web app with OpenCV, NumPy, Matplotlib and scikit-learn, a SQLite store for analysis history, and ReportLab for printable reports. Processing is split into separate modules for preprocessing, segmentation, global fractal analysis, local multifractal analysis, and the reference and index calculation."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Preprocessing: resize to a standard resolution, extract the green channel, apply CLAHE (clip limit 2.0, 8×8 tiles), then Gaussian smoothing.",
+            "Segmentation: black-hat morphology with thresholding. An optional manual threshold slider re-runs the real analysis rather than only changing the display.",
+            "Global fractal dimension: the slope of ln N(ε) against ln(1/ε), fitted by least squares, reported with R² and a regression plot.",
+            "Local analysis: a 4×4 grid gives 16 regions, each with a vessel density and a local box-counting dimension αᵢ.",
+            "Experimental extras kept separate from the core maths: an ROC / Youden's J cutoff computed from the user's own labelled analyses, and a Random Forest (200 trees, maximum depth 4, balanced class weights) trained on the already-computed features and retrained from the current database on each use."
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Quantities defined in the model.",
+          "headers": [
+            "Quantity",
+            "Definition"
+          ],
+          "rows": [
+            [
+              "Global fractal dimension D",
+              "Slope of ln N(ε) versus ln(1/ε)"
+            ],
+            [
+              "Local vessel density Pᵢ",
+              "Vᵢ / Aᵢ (vessel pixels over region area)"
+            ],
+            [
+              "Multifractal spread Δα",
+              "α<sub>max</sub> − α<sub>min</sub> across the 16 regions"
+            ],
+            [
+              "Fractal deviation FD",
+              "|D − D<sub>H</sub>| / D<sub>H</sub>"
+            ],
+            [
+              "Multifractal deviation MD",
+              "|Δα − Δα<sub>H</sub>| / Δα<sub>H</sub>"
+            ],
+            [
+              "Microvascular Abnormality Index",
+              "MAI = (FD + MD) / 2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing and validation",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The study compares healthy and abnormal vascular networks using healthy images as the reference. Within the application, the optional classifier reports cross-validated accuracy, precision, recall and a confusion matrix computed from whatever labelled data the user has loaded, and gives a leave-one-out prediction beside, never in place of, the rule-based result."
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "title": "Results",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The study abstract states that the system was able to measure differences between healthy and abnormal retinal vascular patterns, and that it displays the vessel map, the calculations, graphs and a simulation of how the MAI is obtained. The abstract gives no numerical results."
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "title": "Engineering decisions",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Every number is traceable. A Mathematics page shows each formula with the values substituted from the current image, and the animation reuses those stored values.",
+            "References come from data. Calibration statistics are computed from uploaded healthy images, so the index cannot silently depend on constants chosen in code.",
+            "The machine-learning option never alters how D, Δα, FD, MD or MAI are calculated, which keeps the core measurements independent of any trained model.",
+            "Diagnostic language is avoided in the interface and the documentation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Design notes and next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Intended use: research and education. The MAI describes structural deviation from a healthy reference and is not a clinical diagnosis.",
+            "Reference calibration: every deviation score is computed against healthy images the user uploads, so the index sharpens as the reference set grows.",
+            "Image input: clear, well-lit fundus photographs give the cleanest vessel maps."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Next steps: scale the evaluation to larger labelled datasets, report classification metrics, and benchmark the MAI against established vascular measures."
+        }
+      ]
+    }
+  ],
+  "evidence": "source code, demo video",
+  "related": [
+    {
+      "label": "Method article: how RETINA measures vessel complexity",
+      "url": "/articles/retina-vessel-complexity/"
+    }
+  ]
+}

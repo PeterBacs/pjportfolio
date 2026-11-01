@@ -1,0 +1,124 @@
+{
+  "slug": "vision",
+  "name": "VISION",
+  "fullTitle": "VISION: Medical Images Classification and Identification System",
+  "acronymNote": "",
+  "summary": "A machine-learning system that classifies medical images of the lungs, brain and skin and explains its predictions with probability charts and Grad-CAM heatmaps.",
+  "status": "Working demo",
+  "statusGroup": "Working demo",
+  "year": null,
+  "role": "Developer",
+  "roleBasis": "stated",
+  "involvement": "Personal project",
+  "result": "Returns a class probability, a Grad-CAM overlay and training curves for an uploaded scan (brain example shown).",
+  "tags": [
+    "CNN",
+    "Grad-CAM",
+    "Medical imaging",
+    "Web application"
+  ],
+  "tech": [
+    "CNN",
+    "Grad-CAM",
+    "Medical imaging",
+    "Web application"
+  ],
+  "keywords": "medical image classification brain tumor lung pneumonia skin lesion deep learning explainable AI diagnostics healthcare",
+  "featuredOrder": 6,
+  "thumbnail": "thumb-vision",
+  "docs": [
+    {
+      "id": "doc-vision",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [
+    "vision-demo"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The Medical Images Classification and Identification System uses machine learning to classify medical images related to the lungs, brain and skin, with the aim of detecting abnormalities such as tumours, pneumonia and skin lesions. Automated image recognition is intended to help healthcare professionals identify critical conditions faster."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Model",
+              "Convolutional neural network (CNN) image classifier. The demonstration classifies a brain image as Normal or Brain Tumor and reports the probability."
+            ],
+            [
+              "Explainability",
+              "Grad-CAM heatmap overlay highlights the image regions associated with the prediction, with a text explanation panel."
+            ],
+            [
+              "Training views",
+              "Training-loss and training-accuracy plots appear alongside each prediction."
+            ],
+            [
+              "Interface",
+              "Browser application served locally, with image upload, a probability bar chart, a live-detection option and an ID-scan field on the start screen."
+            ],
+            [
+              "Scope",
+              "Designed for lung, brain and skin images."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "What the demonstration shows",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The recorded demonstration follows a brain-image example:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Upload an image for brain-tumour detection.",
+            "A result panel shows the diagnosis label and a probability. A bar chart compares the Normal and Brain Tumor classes.",
+            "A text explanation states that a convolutional neural network (CNN) produced the prediction.",
+            "A Grad-CAM heatmap overlay highlights the image region that influenced the result.",
+            "Training-loss and training-accuracy plots are shown beside the prediction."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Intended use and next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Intended use: decision support for screening. Final diagnosis stays with a qualified clinician."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Next steps: extend the lung and skin workflows to the same explainable interface, and report per-class precision, recall and ROC-AUC on held-out data."
+        }
+      ]
+    }
+  ],
+  "evidence": "demo video"
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "safaris",
+  "name": "SAFARIS",
+  "fullTitle": "SAFARIS: Spatiotemporal Analysis Farming Guide Using an AI-Powered System",
+  "acronymNote": "",
+  "summary": "A web application that gives farmers crop, fertiliser and plant-disease guidance from soil nutrients, location and leaf images.",
+  "status": "Working demo",
+  "statusGroup": "Working demo",
+  "year": null,
+  "role": "Project author",
+  "roleBasis": "unconfirmed",
+  "involvement": "To be confirmed",
+  "result": "Four guidance pages demonstrated in an 87-second walkthrough, including a disease result with causes and prevention steps.",
+  "tags": [
+    "Machine learning",
+    "Web application",
+    "Plant disease detection",
+    "Soil NPK"
+  ],
+  "tech": [
+    "Machine learning",
+    "Web application",
+    "Plant disease detection"
+  ],
+  "keywords": "agriculture farming crop recommendation fertilizer soil nutrients NPK pH weather plant disease yield sustainability spatiotemporal",
+  "featuredOrder": 5,
+  "thumbnail": "thumb-safaris",
+  "docs": [
+    {
+      "id": "doc-safaris",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [
+    "safaris-demo"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The Spatiotemporal Analysis Farming Guide Using an AI-Powered System applies AI and machine learning to soil content, weather patterns and crop growth over time and space. It gives farmers recommendations on which crops suit their soil nutrient levels (NPK), pH and environmental conditions, helps detect plant diseases early, and offers guidance on fertilisation, planting schedules and disease management."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "title": "Problem",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Choosing crops and treatments depends on soil, climate and the condition of the plants. The project aims to put that guidance in front of farmers in one place, to improve productivity and sustainability."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Application",
+              "Browser-based web application with Crop, Fertilizer, Disease and Field pages, shown running on a local server."
+            ],
+            [
+              "Inputs",
+              "Province selection for crop advice, soil nitrogen, phosphorus and potassium (NPK) values with the target crop for fertiliser advice, and a leaf-image upload for disease detection."
+            ],
+            [
+              "Outputs",
+              "Recommended crop, fertiliser guidance, and a disease result that names the crop and disease with its cause and prevention steps (a corn example is shown)."
+            ],
+            [
+              "Machine learning",
+              "Models for crop recommendation and plant-disease detection. The project folder holds model files, notebooks and a plant-disease image dataset, as seen in the demonstration video."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "What the demonstration shows",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The home page poses four questions: what crop to plant here, what fertiliser to use, which disease the crop has, and how to cure it. The walkthrough then shows:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Crop recommendation: a province selector with a Predict action.",
+            "Fertiliser advice: nitrogen, phosphorus and potassium inputs plus the crop to be grown.",
+            "Disease prediction: a leaf image is uploaded and the result page names the crop and disease, its cause and prevention or treatment steps (a corn example is shown).",
+            "A separate field page."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Field trials with farmers, and more crops, provinces and diseases in the recommendation models.",
+            "Mobile-friendly and offline use for farms with weak connectivity."
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": "demo video"
+}

@@ -1,0 +1,145 @@
+{
+  "slug": "skin-lesion-matlab",
+  "name": "Skin Lesion Detection in MATLAB",
+  "fullTitle": "Melanoma Detection Using Image Processing (MATLAB)",
+  "acronymNote": "",
+  "summary": "A MATLAB graphical interface that processes a skin-lesion photograph through grey conversion, enhancement, binarisation and segmentation, then reports a classification with Energy and Contrast values.",
+  "status": "Working demo",
+  "statusGroup": "Working demo",
+  "year": null,
+  "role": "Developer",
+  "roleBasis": "stated",
+  "involvement": "Personal project",
+  "result": "One example run completed in 39.0 s, reporting Energy 0.411 and Contrast 0.188.",
+  "tags": [
+    "MATLAB",
+    "Image processing",
+    "Segmentation",
+    "Skin lesion"
+  ],
+  "tech": [
+    "MATLAB",
+    "Image processing",
+    "Segmentation"
+  ],
+  "keywords": "skin cancer melanoma lesion detection image processing segmentation texture energy contrast CNN dermatology",
+  "featuredOrder": 7,
+  "thumbnail": "thumb-skin",
+  "docs": [
+    {
+      "id": "doc-skin",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This MATLAB interface walks a skin-lesion photograph through a visible image-processing pipeline and returns a classification label. The pipeline stages are shown side by side so the user can see what each step does."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Platform",
+              "MATLAB graphical interface with Train Database and Detect Melanoma functions."
+            ],
+            [
+              "Pipeline",
+              "Input image, grey conversion, enhancement, binarisation, segmentation, then classification, with each stage shown side by side."
+            ],
+            [
+              "Measurements",
+              "Energy and Contrast readouts, a boundary plot in the classification panel, and elapsed processing time."
+            ],
+            [
+              "Related work",
+              "The project description also covers CNN architectures trained on large image databases for skin-cancer and tumour detection."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Processing pipeline",
+      "blocks": [
+        {
+          "type": "flow",
+          "caption": "",
+          "steps": [
+            {
+              "label": "Input image",
+              "detail": "Lesion photograph"
+            },
+            {
+              "label": "Grey conversion",
+              "detail": ""
+            },
+            {
+              "label": "Enhancement",
+              "detail": ""
+            },
+            {
+              "label": "Binarisation",
+              "detail": "Lesion mask"
+            },
+            {
+              "label": "Segmentation",
+              "detail": "Lesion region extracted"
+            },
+            {
+              "label": "Classification",
+              "detail": "Label, Energy, Contrast, elapsed time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Interface and example run",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The menu offers Train Database, Detect Melanoma, About, Reset All and Exit. In the captured run the status line reads that detection completed, the classification reads \"Highly Affected Melanoma\", Energy is 0.411373, Contrast is 0.18796 and the total elapsed time is 39.0037 seconds."
+        },
+        {
+          "type": "figure",
+          "id": "skin-gui"
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Related work and next steps",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This interface sits alongside broader work on CNN-based skin-cancer and tumour detection trained on large image databases, together with NLP, predictive modelling and anomaly detection."
+        },
+        {
+          "type": "p",
+          "text": "Next steps: evaluate the pipeline on a public lesion dataset and compare its Energy and Contrast features with a CNN classifier."
+        }
+      ]
+    }
+  ],
+  "evidence": "screenshot"
+}

@@ -1,0 +1,116 @@
+{
+  "slug": "school-information-system",
+  "name": "School Information and Data Management System",
+  "fullTitle": "Web-based School Information and Data Management System",
+  "acronymNote": "",
+  "summary": "A web-based system that automates student records, attendance and grading to reduce administrative workload and errors in a school.",
+  "status": "Working demo",
+  "statusGroup": "Working demo",
+  "year": null,
+  "role": "Developer",
+  "roleBasis": "stated",
+  "involvement": "Personal project",
+  "result": "Automates student records, attendance and grading, with statistical dashboards by grade level and gender.",
+  "tags": [
+    "Web application",
+    "Records management",
+    "Attendance",
+    "Dashboards"
+  ],
+  "tech": [
+    "Web application",
+    "Records management",
+    "Attendance",
+    "Dashboards"
+  ],
+  "keywords": "school information management student records attendance grading administration automation dashboard education",
+  "featuredOrder": 8,
+  "thumbnail": "thumb-school-system",
+  "docs": [
+    {
+      "id": "doc-school-system",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [
+    "school-system-demo"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "This web-based School Information and Data Management System automates student records, attendance and grading. The aim is to reduce administrative workload and errors, make school data more transparent and accountable, and let staff spend more time on teaching."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Application",
+              "Web-based system for student records, attendance and grading."
+            ],
+            [
+              "Dashboards",
+              "Statistical dashboard with donut and bar charts and tables of learners by grade level and gender."
+            ],
+            [
+              "Records",
+              "Learner list with row-level actions, staff profile pages, and a faculty and staff gallery grouped by department."
+            ],
+            [
+              "Attendance and files",
+              "ID-number scan screen with a live clock, and a file-manager login."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Modules seen in the demonstration",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The screen recording shows these parts of the system:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "A statistical dashboard with learner counts per grade level and a gender ratio, shown as charts and tables.",
+            "A learner-management view with a tabular learner list and row-level actions.",
+            "An attendance screen that prompts for an ID number and shows a live clock.",
+            "A staff profile view, a faculty and staff gallery grouped by department, and a file-manager login."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Role-based access, audit logs and automated backups.",
+            "Parent and student portals, and mobile attendance by QR code or ID card."
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": "demo video"
+}

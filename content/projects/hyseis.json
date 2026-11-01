@@ -1,0 +1,181 @@
+{
+  "slug": "hyseis",
+  "name": "HYSEIS",
+  "fullTitle": "HYSEIS: Hybrid Seismology Intelligence System",
+  "acronymNote": "",
+  "summary": "An earthquake-aftershock forecasting and hazard-mapping tool that combines Omori–Utsu and Gutenberg–Richter models with XGBoost, shown on an interactive map.",
+  "status": "Working demo",
+  "statusGroup": "Working demo",
+  "year": null,
+  "role": "Project author",
+  "roleBasis": "unconfirmed",
+  "involvement": "To be confirmed",
+  "result": "Forecast and observed modes with 12 h to 30 d windows, nearest-fault lookup and an intensity heatmap.",
+  "tags": [
+    "XGBoost",
+    "Omori–Utsu",
+    "Gutenberg–Richter",
+    "GIS mapping"
+  ],
+  "tech": [
+    "XGBoost",
+    "Omori–Utsu",
+    "Gutenberg–Richter",
+    "GIS mapping",
+    "Leaflet"
+  ],
+  "keywords": "earthquake seismology aftershock forecast hazard map fault line ground motion simulation disaster preparedness Philippines 3D visualization forecasting scientific modelling visualization time-series data science gis",
+  "featuredOrder": 3,
+  "thumbnail": "thumb-hyseis",
+  "docs": [
+    {
+      "id": "doc-hyseis",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "HYSEIS (Hybrid Seismology Intelligence System) combines the Omori–Utsu and Gutenberg–Richter seismic models with XGBoost machine learning to forecast aftershock probabilities and magnitudes from historical earthquake data. It also brings together fault-line mapping, distance estimation, ground-motion simulation, GIS-based hazard maps and interactive 3D visualisation to support seismic-risk analysis and disaster preparedness."
+        },
+        {
+          "type": "figure",
+          "id": "hyseis-map"
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "title": "Problem",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "After a large earthquake, planners need to know where aftershocks are likely, how large they may be, and which nearby communities and faults are involved. The project brings these questions into one interface for risk analysis and preparedness."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Forecasting models",
+              "Omori–Utsu aftershock decay and the Gutenberg–Richter magnitude–frequency relation, combined with XGBoost to forecast aftershock probabilities and magnitudes from historical earthquake data."
+            ],
+            [
+              "Mapping",
+              "Interactive Leaflet map on Esri World Imagery. OpenStreetMap Nominatim reverse geocoding gives epicentre addresses. A PHIVOLCS fault layer supports nearest-fault distance, fault length and endpoints."
+            ],
+            [
+              "Analysis views",
+              "Magnitude and depth controls, time windows from 12 h to 30 d, and forecast or observed modes. Heatmap, pins, risk map and clickable grid cells, with an intensity legend from I to X."
+            ],
+            [
+              "Event report",
+              "Ranked table of nearby towns with distance, intensity class, expected aftershocks and the probability of the event being felt at intensity IV or above."
+            ],
+            [
+              "Additional views",
+              "Seismograph, shockwave and live-simulation views, and keyboard shortcuts for the main layers. The interface is served locally in the screenshots."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "System components",
+      "blocks": [
+        {
+          "type": "flow",
+          "arrows": false,
+          "caption": "",
+          "steps": [
+            {
+              "label": "Historical earthquake data",
+              "detail": "Input to the forecasting models"
+            },
+            {
+              "label": "Omori–Utsu and Gutenberg–Richter",
+              "detail": "Aftershock decay and magnitude–frequency models"
+            },
+            {
+              "label": "XGBoost",
+              "detail": "Aftershock probability and magnitude forecasts"
+            },
+            {
+              "label": "Fault mapping and distance estimation",
+              "detail": "Nearest fault, distances to places"
+            },
+            {
+              "label": "Ground-motion simulation",
+              "detail": "Shaking intensity classes"
+            },
+            {
+              "label": "GIS hazard maps and 3D view",
+              "detail": "Interactive visualisation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Interface and implementation",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The screenshots show a browser interface served locally. Its main functions:"
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Controls for event magnitude, depth and a time window of 12 h, 24 h, 48 h, 7 d or 30 d, with a Forecast / Observed switch.",
+            "Overlays for a heatmap, event pins, active faults, a time-window risk map and clickable grid cells. A legend uses intensity classes I to X.",
+            "Event Details: epicentre address, magnitude, depth, nearest fault, and a ranked table of nearby towns with distance, intensity class, expected aftershocks and probability of being felt at class IV or above.",
+            "Fault Finder: click a location to get the municipality, the nearest mapped fault line, the distance to it, the fault's length and its endpoints.",
+            "Further views labelled Seismograph, Shockwave and Live Simulation.",
+            "Map data: satellite imagery tiles for the basemap, a Leaflet map and reverse geocoding for epicentre addresses."
+          ]
+        },
+        {
+          "type": "gallery",
+          "ids": [
+            "hyseis-event",
+            "hyseis-fault",
+            "hyseis-forecast"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Compare forecast probabilities with observed aftershock sequences and report calibration.",
+            "Extend the fault database and the municipality-level intensity layers.",
+            "Add more historical earthquake catalogues to the training data."
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": "screenshots"
+}

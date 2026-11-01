@@ -1,0 +1,217 @@
+{
+  "slug": "smart-helmet",
+  "name": "Smart Helmet",
+  "fullTitle": "Smart Helmet: AI-Assisted Wearable Safety Prototype",
+  "acronymNote": "",
+  "summary": "An AI-assisted helmet prototype that monitors signs of fatigue and dizziness, detects alcohol, and supports emergency response. It won a silver prize at the Seoul International Invention Fair 2024.",
+  "status": "Prototype",
+  "statusGroup": "Prototype",
+  "year": 2024,
+  "yearNote": "SIIF 2024 award year",
+  "role": "Coach and named inventor",
+  "roleBasis": "documented",
+  "involvement": "Student team, coached",
+  "result": "Silver Prize, Seoul International Invention Fair (SIIF) 2024; SIBOL invention award.",
+  "tags": [
+    "Raspberry Pi",
+    "MQ-2 gas sensor",
+    "GPS and GSM",
+    "Machine learning"
+  ],
+  "tech": [
+    "Raspberry Pi",
+    "MQ-2 gas sensor",
+    "Accelerometer",
+    "GPS module",
+    "GSM module",
+    "Machine learning",
+    "Wearable sensors"
+  ],
+  "keywords": "helmet wearable safety fatigue dizziness alcohol detection emergency response invention award SIIF SIBOL students Lanna National High School raspberry pi mq-2 gps gsm accelerometer wearable iot emergency alert",
+  "featuredOrder": 1,
+  "thumbnail": "thumb-smart-helmet",
+  "docs": [
+    {
+      "id": "doc-helmet",
+      "label": "Project description",
+      "note": "Short summary"
+    }
+  ],
+  "videos": [
+    "helmet-news"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Smart Helmet is an AI-assisted wearable safety prototype. It monitors signs of fatigue and dizziness, detects alcohol, and supports emergency response. It combines onboard computing, sensors and machine learning to analyse monitoring data and identify potential safety risks, bringing embedded systems and intelligent monitoring into a helmet-based design."
+        },
+        {
+          "type": "figure",
+          "id": "helmet-1"
+        }
+      ]
+    },
+    {
+      "id": "contribution",
+      "title": "My role",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The Smart Helmet was developed by student researchers of Lanna National High School with their coaches, including me. I am named with a student co-inventor in the Seoul International Invention Fair 2024 entry, and DOST Region 02 lists me among the team's coaches."
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Controller",
+              "Raspberry Pi reads the sensors, runs the models and coordinates the outputs."
+            ],
+            [
+              "Sensors",
+              "MQ-2 gas sensor for gas and alcohol, an accelerometer for head movement and impacts, and a GPS module for location."
+            ],
+            [
+              "Communication",
+              "GSM module for cellular emergency alerts."
+            ],
+            [
+              "Display",
+              "Backlit LCD in a pouch, connected to the helmet by cable."
+            ],
+            [
+              "Software intelligence",
+              "Machine-learning models analyse the sensor data to identify potential safety risks, including fatigue, dizziness and alcohol."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "System overview",
+      "blocks": [
+        {
+          "type": "flow",
+          "arrows": true,
+          "caption": "",
+          "steps": [
+            {
+              "label": "Sensors",
+              "detail": "MQ-2 gas sensor, accelerometer and GPS module"
+            },
+            {
+              "label": "Raspberry Pi",
+              "detail": "Reads the sensors and runs the models"
+            },
+            {
+              "label": "Machine-learning models",
+              "detail": "Identify potential safety risks"
+            },
+            {
+              "label": "Outputs",
+              "detail": "LCD display and GSM emergency alert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Hardware and software",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "The prototype is built around a Raspberry Pi that reads the helmet's sensors, runs machine-learning models on the data and drives the display and alerts."
+        },
+        {
+          "type": "table",
+          "caption": "Components",
+          "headers": [
+            "Component",
+            "Role in the helmet"
+          ],
+          "rows": [
+            [
+              "Raspberry Pi",
+              "Main controller: reads the sensors, runs the machine-learning models and coordinates the outputs."
+            ],
+            [
+              "MQ-2 gas sensor",
+              "Gas and alcohol sensing."
+            ],
+            [
+              "Accelerometer",
+              "Measures head movement and sudden impacts."
+            ],
+            [
+              "GPS module",
+              "Provides the helmet's location."
+            ],
+            [
+              "GSM module",
+              "Cellular link for sending emergency alerts."
+            ],
+            [
+              "LCD display",
+              "Backlit status display in a pouch, connected to the helmet by cable."
+            ],
+            [
+              "Machine-learning models",
+              "Software intelligence that analyses the sensor data to identify potential safety risks, including fatigue, dizziness and alcohol."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "id": "helmet-2"
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "title": "Recognition",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Silver Prize, Seoul International Invention Fair (SIIF) 2024, South Korea.",
+            "First Prize, SIBOL Award (Creative Research, High School Level), National Invention Contest and Exhibits 2024, presented at the 2024 NICE Presidential Awards."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Photographs, articles and source links for each award are on the Awards page."
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Field testing across riding conditions and refinement of the fatigue, dizziness and alcohol-detection thresholds.",
+            "Integration of emergency alerts with mobile and mapping services."
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": "prototype photos, video, competition award"
+}

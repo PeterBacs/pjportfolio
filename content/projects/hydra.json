@@ -1,0 +1,165 @@
+{
+  "slug": "hydra",
+  "name": "HYDRA",
+  "fullTitle": "HYDRA: Smart Hydration Assessment Kiosk",
+  "acronymNote": "",
+  "summary": "A machine-learning kiosk prototype that assesses hydration from an eye scan, a urine reagent strip and a finger pulse sensor, then dispenses the water volume suggested by the result.",
+  "status": "Prototype",
+  "statusGroup": "Prototype",
+  "year": null,
+  "role": "Project author",
+  "roleBasis": "unconfirmed",
+  "involvement": "To be confirmed",
+  "result": "Combines eye-image features, urine specific gravity, heart rate and SpO₂ to assess hydration and dispense water.",
+  "tags": [
+    "U-Net",
+    "YOLOv11",
+    "SVM",
+    "MAX30102"
+  ],
+  "tech": [
+    "U-Net",
+    "YOLOv11",
+    "SVM",
+    "MAX30102",
+    "Image segmentation",
+    "Specific gravity strip"
+  ],
+  "keywords": "hydration dehydration eye tear meniscus heart rate oxygen saturation sensor multimodal machine learning health prototype kiosk urine reagent strip specific gravity water dispenser touchscreen students computer vision multimodal sensor fusion yolo machine learning",
+  "featuredOrder": 4,
+  "thumbnail": "thumb-hydra",
+  "docs": [
+    {
+      "id": "doc-hydra",
+      "label": "Project description",
+      "note": "One-paragraph summary"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "HYDRA is a machine-learning prototype designed to assess hydration status and identify possible dehydration. It combines several inputs instead of relying on one signal: an enclosed eye-scan camera, a urine-strip camera and a finger pulse sensor. It then dispenses filtered water in an amount based on the hydration risk."
+        },
+        {
+          "type": "figure",
+          "id": "hydra-concept"
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical details",
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Technology and methods",
+          "headers": [
+            "Area",
+            "Technology and details"
+          ],
+          "rows": [
+            [
+              "Image segmentation",
+              "U-Net isolates the tear-meniscus region in each eye image. Six parameters are extracted: area, mean thickness, maximum thickness, curvature, continuity and intensity."
+            ],
+            [
+              "Object detection",
+              "YOLOv11 detects the urine reagent strip and its specific-gravity (SG) pad. Training images were annotated in CVAT."
+            ],
+            [
+              "Classification",
+              "A Support Vector Machine (SVM) combines the image-derived features with heart rate and SpO₂ to separate hydration categories."
+            ],
+            [
+              "Sensors and imaging",
+              "MAX30102 optical sensor for heart rate and SpO₂. An enclosed eye-scan camera with uniform LED lighting, and a urine-strip camera with controlled lighting."
+            ],
+            [
+              "Hardware",
+              "Touchscreen interface, filtered water reservoir, and a dispenser pump with its control system."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "How it works",
+      "blocks": [
+        {
+          "type": "flow",
+          "caption": "",
+          "steps": [
+            {
+              "label": "Scan eyes",
+              "detail": "Enclosed camera with LED lighting captures the lower-eyelid tear meniscus"
+            },
+            {
+              "label": "Analyze urine",
+              "detail": "Internal camera reads a reagent strip for specific gravity, with YOLOv11 detecting the strip"
+            },
+            {
+              "label": "Measure pulse",
+              "detail": "Finger sensor (MAX30102) reads heart rate and SpO₂"
+            },
+            {
+              "label": "AI analysis",
+              "detail": "U-Net segmentation and an SVM classifier combine the data"
+            },
+            {
+              "label": "Dispense water",
+              "detail": "Touchless dispenser delivers the volume matched to hydration risk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "Implementation",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Eye scan: an enclosed module with uniform LED illumination, similar to an ophthalmic device, captures the tear meniscus.",
+            "Segmentation: U-Net isolates the relevant region in each eye image.",
+            "Urine analysis: a discreet camera with controlled lighting reads the reagent strip for specific gravity (SG). YOLOv11 detects the strip and its specific-gravity pad in the image.",
+            "Physiological sensing: a MAX30102 optical sensor supplies heart rate and blood-oxygen saturation (SpO₂).",
+            "Classification: a Support Vector Machine analyses the extracted features and distinguishes hydration categories.",
+            "Hardware: touchscreen interface, water reservoir with filtration, and a dispenser pump with control system."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Six image-derived parameters describe the tear meniscus: area, mean thickness, maximum thickness, curvature, continuity and intensity."
+        },
+        {
+          "type": "figure",
+          "id": "hydra-eye"
+        }
+      ]
+    },
+    {
+      "id": "next-steps",
+      "title": "Intended use and next steps",
+      "blocks": [
+        {
+          "type": "ul",
+          "items": [
+            "Intended use: hydration awareness for students and general wellness. It is not a diagnostic device."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Next steps: collect a larger labelled dataset across lighting conditions and skin tones, report classification metrics for each input, and compare the combined model with each single input."
+        }
+      ]
+    }
+  ],
+  "evidence": "project description, prototype image"
+}
