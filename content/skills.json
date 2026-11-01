@@ -1,0 +1,708 @@
+{
+  "title": "Technical Skills and Engineering Capabilities",
+  "intro": [],
+  "legend": "Tags beside each project show what supports the claim: source code, demo video, screenshots, prototype photos or a competition award.",
+  "sections": [
+    {
+      "id": "embedded",
+      "letter": "A",
+      "title": "Embedded Systems and IoT",
+      "nav": "Embedded and IoT",
+      "summary": "I build sensing, computing and display hardware that measures, processes and reports, and I have used it in the Smart Helmet and HYDRA.",
+      "capabilities": [
+        {
+          "title": "Microcontroller and single-board computer platforms",
+          "description": "I program and interface Arduino and ESP32 microcontrollers and Raspberry Pi single-board computers as the sensing, control and processing core of my prototypes. In the Smart Helmet, a Raspberry Pi is the controller of a wearable that I coached my student team to build and on which I am a named inventor. In HYDRA, as project author, I joined sensors, cameras and a water dispenser in one kiosk.",
+          "tools": [
+            "Arduino",
+            "ESP32",
+            "Raspberry Pi"
+          ],
+          "projects": [
+            "smart-helmet",
+            "hydra"
+          ],
+          "review": "Which board HYDRA uses, and whether Arduino and ESP32 appear in any project."
+        },
+        {
+          "title": "Firmware and hardware interfaces",
+          "description": "I write C/C++ firmware and connect modules over I²C (Inter-Integrated Circuit), SPI (Serial Peripheral Interface) and UART (serial) links. In HYDRA, I connected the I²C-based MAX30102 pulse oximeter so that a finger pulse reading sits alongside the camera-based measurements.",
+          "tools": [
+            "C/C++",
+            "I²C",
+            "SPI",
+            "UART"
+          ],
+          "projects": [
+            "hydra"
+          ],
+          "review": "C/C++ and the three buses come from your request; confirm where each was used."
+        },
+        {
+          "title": "Sensor integration",
+          "description": "I read physiological, gas, motion, environmental, distance and camera sensors and pass clean data to analysis software. The Smart Helmet uses an MQ-2 gas sensor, an accelerometer and a GPS module; HYDRA uses a MAX30102 sensor and cameras. I also work with temperature, humidity, light, ultrasonic and infrared distance sensors.",
+          "tools": [
+            "MAX30102 pulse oximetry and heart rate",
+            "MQ-2 gas and alcohol sensing",
+            "Accelerometer",
+            "GPS module",
+            "Temperature, humidity and light",
+            "Ultrasonic and infrared distance",
+            "Camera modules"
+          ],
+          "projects": [
+            "hydra",
+            "smart-helmet"
+          ],
+          "review": "Environmental and distance sensors have no project evidence."
+        },
+        {
+          "title": "Connected devices and edge processing",
+          "description": "I build prototypes that collect data on the device, run the analysis locally or on a nearby computer, and report through a display, GPS location and a cellular GSM link. The Smart Helmet works this way: it monitors the wearer, analyses the readings and supports an emergency response. HYDRA analyses its measurements and reports the volume of water to dispense.",
+          "tools": [
+            "Raspberry Pi",
+            "GPS module",
+            "GSM module",
+            "LCD and touchscreen displays",
+            "TinyML / TensorFlow Lite"
+          ],
+          "projects": [
+            "smart-helmet",
+            "hydra"
+          ],
+          "review": "TinyML / TensorFlow Lite and any Wi-Fi, Bluetooth or MQTT use: confirm."
+        }
+      ]
+    },
+    {
+      "id": "robotics",
+      "letter": "B",
+      "title": "Robotics, Automation and System Integration",
+      "nav": "Robotics and automation",
+      "summary": "I build microcontroller- and computer-controlled prototypes, I am trained in industrial automation (PLCs, SCADA and industrial robots), and I coach student robotics teams.",
+      "capabilities": [
+        {
+          "title": "Sensor and actuator integration",
+          "description": "I connect sensors to actuators and coordinate them from one controller. In HYDRA, a single control system runs the cameras, the pulse sensor and the pump that dispenses the volume of water the analysis suggests.",
+          "tools": [
+            "Pump and dispenser control",
+            "Motors and servos"
+          ],
+          "projects": [
+            "hydra"
+          ],
+          "review": "Motors and servos have no project evidence."
+        },
+        {
+          "title": "Control logic and automated operating sequences",
+          "description": "I define the order in which a device senses, decides and acts. HYDRA follows a scan, analyse and dispense cycle, and the Smart Helmet keeps monitoring its wearer and raises an alert when it detects a problem.",
+          "tools": [
+            "Sequential control logic",
+            "Threshold-based alerts"
+          ],
+          "projects": [
+            "hydra",
+            "smart-helmet"
+          ],
+          "review": "Smart Helmet alert thresholds: confirm how they are set."
+        },
+        {
+          "title": "Workflow and process automation",
+          "description": "I connect apps, data sources and devices into automated workflows, using triggers, API calls, data transformations, notifications and scheduled runs. I build them with tools such as n8n, Node-RED, Zapier and Make.",
+          "tools": [
+            "n8n",
+            "Node-RED",
+            "Zapier",
+            "Make",
+            "Webhooks and APIs",
+            "Scheduled jobs"
+          ],
+          "projects": [],
+          "review": "Which of these tools you use, and an example workflow (for example sensor data into a notification)."
+        },
+        {
+          "title": "Industrial automation (training)",
+          "description": "I have trained in programmable logic controllers (PLC), supervisory control and data acquisition (SCADA) systems and industrial robots. This extends the embedded control I do in my own prototypes to factory-style automation.",
+          "tools": [
+            "PLC programming",
+            "SCADA",
+            "Industrial robots"
+          ],
+          "projects": [],
+          "review": "Where and when you trained, which PLC brand and language (for example ladder logic), which SCADA software and robot brand, and any certificate. Industrial experience is not claimed."
+        },
+        {
+          "title": "Robotics software and simulation",
+          "description": "Before I build hardware, I simulate mobile robots, manipulators and perception pipelines in virtual environments. I use Gazebo with ROS 2 for mobile robots and navigation, NVIDIA Isaac Sim and Isaac Lab for AI robotics and learning-based control, CoppeliaSim for robot arms and custom robot prototypes, and Webots for teaching and research simulation.",
+          "tools": [
+            "ROS 2",
+            "Gazebo",
+            "NVIDIA Isaac Sim",
+            "Isaac Lab",
+            "CoppeliaSim",
+            "Webots"
+          ],
+          "byPurpose": [
+            {
+              "purpose": "Mobile robots and navigation",
+              "tools": "Gazebo with ROS 2"
+            },
+            {
+              "purpose": "AI robotics, perception and learning-based control",
+              "tools": "NVIDIA Isaac Sim, Isaac Lab"
+            },
+            {
+              "purpose": "Robot arms and custom robot prototypes",
+              "tools": "CoppeliaSim (scripted in Python or through ROS)"
+            },
+            {
+              "purpose": "Teaching and research simulation",
+              "tools": "Webots"
+            }
+          ],
+          "projects": [],
+          "review": "No project uses these. Confirm which you have run and to what depth, especially Isaac Lab."
+        },
+        {
+          "title": "Prototype integration, troubleshooting and testing",
+          "description": "I combine hardware, firmware and software into a working prototype, then test and debug it as a system. I did this myself as the author of HYDRA, and I guided my student team through the same prototyping and testing on the Smart Helmet.",
+          "tools": [
+            "System integration",
+            "Debugging",
+            "Functional testing"
+          ],
+          "projects": [
+            "smart-helmet",
+            "hydra"
+          ]
+        },
+        {
+          "title": "Robotics coaching",
+          "description": "I coach student teams in robotics and intelligent-machine competitions, and I have been recognised as a Winning Coach in Robotics and Intelligent Machine under the Department of Education.",
+          "tools": [
+            "Team coaching",
+            "Competition preparation"
+          ],
+          "projects": [],
+          "links": [
+            {
+              "label": "Winning Coach and other awards",
+              "url": "/awards/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "letter": "C",
+      "title": "Artificial Intelligence, Machine Learning and Computer Vision",
+      "nav": "AI, ML and vision",
+      "summary": "I build models and image-analysis workflows that turn data into measurements, classifications and forecasts, and I have applied them in HYDRA, RETINA, VISION, HYSEIS and SAFARIS.",
+      "capabilities": [
+        {
+          "title": "Classical machine learning",
+          "description": "I train classifiers and forecasters on engineered features and historical data. In RETINA, I implemented a Random Forest (200 trees, depth 4, balanced class weights) on fractal features. HYDRA uses a Support Vector Machine on its combined measurements, and in HYSEIS I combined XGBoost with the Omori–Utsu and Gutenberg–Richter models to forecast aftershocks.",
+          "tools": [
+            "Support Vector Machine",
+            "Random Forest",
+            "XGBoost",
+            "scikit-learn"
+          ],
+          "projects": [
+            "hydra",
+            "retina",
+            "hyseis"
+          ]
+        },
+        {
+          "title": "Deep learning",
+          "description": "I build and apply convolutional neural networks (CNNs) for image classification and U-Net models for segmentation, working in PyTorch and TensorFlow / Keras. VISION classifies medical images of the lungs, brain and skin with a CNN, and HYDRA uses U-Net segmentation on its eye scan.",
+          "tools": [
+            "CNN",
+            "U-Net",
+            "PyTorch",
+            "TensorFlow / Keras"
+          ],
+          "projects": [
+            "vision",
+            "hydra",
+            "skin-lesion-matlab"
+          ],
+          "review": "Which project used PyTorch and which used TensorFlow/Keras; training details."
+        },
+        {
+          "title": "Image segmentation and feature extraction",
+          "description": "I develop image-processing workflows that isolate the relevant region and extract measurable features. In RETINA, I used OpenCV with CLAHE contrast enhancement, black-hat morphology and thresholding to isolate the vessel network and measure fractal and texture features. In my MATLAB skin-lesion tool, a photograph passes through grey conversion, enhancement, binarisation and segmentation before the tool reports Energy and Contrast values.",
+          "tools": [
+            "Python",
+            "OpenCV",
+            "CLAHE",
+            "Black-hat morphology",
+            "Thresholding",
+            "Fractal and texture features"
+          ],
+          "projects": [
+            "retina",
+            "hydra",
+            "skin-lesion-matlab"
+          ]
+        },
+        {
+          "title": "Object detection",
+          "description": "I detect and localise objects in images. In HYDRA, I use YOLOv11 to find the urine reagent strip and its specific-gravity (SG) pad in the camera image.",
+          "tools": [
+            "YOLOv11"
+          ],
+          "projects": [
+            "hydra"
+          ],
+          "review": "Detection details come from your message: confirm the training data and results."
+        },
+        {
+          "title": "Data annotation and dataset preparation",
+          "description": "I label images with boxes, polygons and masks, then clean, split and version the datasets for training. For HYDRA, I annotated the urine test strips and their SG pads in CVAT, and I also work with Roboflow and Label Studio.",
+          "tools": [
+            "CVAT",
+            "Roboflow",
+            "Label Studio"
+          ],
+          "projects": [
+            "hydra"
+          ],
+          "review": "Roboflow and Label Studio use; dataset sizes."
+        },
+        {
+          "title": "Model evaluation and interpretation",
+          "description": "I evaluate models with stratified k-fold cross-validation, confusion matrices, precision, recall and F1, and ROC / Youden's J cutoffs, as I did in RETINA. In VISION, I explain each prediction with a Grad-CAM heatmap, a probability chart and training curves.",
+          "tools": [
+            "Stratified k-fold cross-validation",
+            "Confusion matrix",
+            "ROC / Youden's J",
+            "Grad-CAM"
+          ],
+          "projects": [
+            "retina",
+            "vision"
+          ]
+        },
+        {
+          "title": "Wider machine-learning topics",
+          "description": "I have working knowledge of natural language processing, predictive modelling and anomaly detection, as I state in my skin-lesion project description.",
+          "tools": [
+            "NLP",
+            "Predictive modelling",
+            "Anomaly detection"
+          ],
+          "projects": [
+            "skin-lesion-matlab"
+          ],
+          "review": "Confirm the depth; this is a statement of understanding rather than a project."
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "letter": "D",
+      "title": "Electronics Design, Prototyping and Simulation",
+      "nav": "Electronics design",
+      "summary": "I check circuits and firmware in simulation before I build hardware, then I assemble and test the prototype at the bench.",
+      "capabilities": [
+        {
+          "title": "Analog and digital circuit simulation",
+          "description": "I check circuit behaviour before I build it. I use LTspice for analog circuits, Logisim Evolution for digital logic design, and NI Multisim when I want analog and digital circuits in one environment.",
+          "tools": [
+            "LTspice",
+            "Logisim Evolution",
+            "NI Multisim"
+          ],
+          "byPurpose": [
+            {
+              "purpose": "Analog circuits",
+              "tools": "LTspice"
+            },
+            {
+              "purpose": "Digital logic design",
+              "tools": "Logisim Evolution"
+            },
+            {
+              "purpose": "Analog and digital circuits in one environment",
+              "tools": "NI Multisim"
+            }
+          ],
+          "projects": [],
+          "review": "No project evidence for the simulators; add an example circuit if you have one."
+        },
+        {
+          "title": "Microcontroller and firmware simulation",
+          "description": "I test firmware against a virtual circuit before I wire any hardware. I use Proteus VSM for firmware with its surrounding circuitry and Wokwi for Arduino, ESP32 and IoT projects online. I also use Tinkercad Circuits, SimulIDE, PICsimLab and Renode for real-time microcontroller, virtual-peripheral and emulated embedded-system work.",
+          "tools": [
+            "Proteus VSM",
+            "Wokwi",
+            "Tinkercad Circuits",
+            "SimulIDE",
+            "PICsimLab",
+            "Renode"
+          ],
+          "byPurpose": [
+            {
+              "purpose": "Firmware with the surrounding circuitry",
+              "tools": "Proteus VSM"
+            },
+            {
+              "purpose": "Arduino, ESP32 and IoT projects online",
+              "tools": "Wokwi"
+            },
+            {
+              "purpose": "Arduino circuits and teaching",
+              "tools": "Tinkercad Circuits"
+            },
+            {
+              "purpose": "Real-time microcontroller circuit simulation",
+              "tools": "SimulIDE"
+            },
+            {
+              "purpose": "PIC, Arduino and ESP32 boards with virtual peripherals",
+              "tools": "PICsimLab"
+            },
+            {
+              "purpose": "Firmware on emulated embedded systems",
+              "tools": "Renode"
+            }
+          ],
+          "projects": [],
+          "review": "You confirmed Wokwi and Proteus VSM; Tinkercad, SimulIDE, PICsimLab and Renode were my suggestions. Keep only those you use."
+        },
+        {
+          "title": "Enclosure and mechanical design",
+          "description": "I model enclosures and mounts for my prototype hardware in CAD software such as SolidWorks and Fusion 360, and I check their fit before anything is made.",
+          "tools": [
+            "SolidWorks",
+            "Fusion 360"
+          ],
+          "projects": [],
+          "review": "Which CAD software, and an example part or enclosure.",
+          "links": [
+            {
+              "label": "Engineering design and fabrication",
+              "url": "/skills/#engineering"
+            }
+          ]
+        },
+        {
+          "title": "Hardware prototyping and testing",
+          "description": "I assemble and test prototype hardware at the bench: the Smart Helmet's sensing and display unit, which my student team built under my coaching, and the HYDRA kiosk, which I authored. This rests on my BS in Electronics Engineering and Computer Science, my MS in Electronics and Telecommunications Engineering and my licence as a Registered Electronics Engineer.",
+          "tools": [
+            "Prototype assembly",
+            "Bench testing"
+          ],
+          "projects": [
+            "smart-helmet",
+            "hydra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "software",
+      "letter": "E",
+      "title": "Programming, Applications and Data Systems",
+      "nav": "Programming and data",
+      "summary": "I write the software that serves my models, stores and processes data, and presents results to engineers.",
+      "capabilities": [
+        {
+          "title": "Programming",
+          "description": "I write Python for analysis and applications, C/C++ for microcontrollers, MATLAB for image processing, JavaScript for interfaces and SQL for data. RETINA is my clearest example: I wrote its Python, JavaScript and SQL myself, and my skin-lesion tool is built in MATLAB.",
+          "tools": [
+            "Python",
+            "C/C++",
+            "MATLAB",
+            "JavaScript",
+            "SQL"
+          ],
+          "projects": [
+            "retina",
+            "skin-lesion-matlab"
+          ]
+        },
+        {
+          "title": "Model-serving applications",
+          "description": "I build web applications that accept an upload, run a model or analysis and return the result. RETINA is a Flask application with 18 routes that I wrote, and I built the browser applications VISION and SAFARIS to work the same way.",
+          "tools": [
+            "Flask",
+            "HTTP routes",
+            "File upload handling"
+          ],
+          "projects": [
+            "retina",
+            "vision",
+            "safaris"
+          ],
+          "review": "Framework used in VISION and SAFARIS."
+        },
+        {
+          "title": "Databases and data handling",
+          "description": "I store analysis history and reference data in SQLite using SQL, process arrays with NumPy, export results to CSV, as in RETINA, and I also work with tables in pandas. I developed the School Information and Data Management System, which manages student records, attendance and grading.",
+          "tools": [
+            "SQLite",
+            "SQL",
+            "NumPy",
+            "CSV export",
+            "pandas"
+          ],
+          "projects": [
+            "retina",
+            "school-information-system"
+          ],
+          "review": "pandas is not used in the RETINA source; confirm where you have used it."
+        },
+        {
+          "title": "Engineering interfaces and reports",
+          "description": "I present results as dashboards, interactive maps, plots and printable reports. RETINA produces plots, PDF reports, a 12-step animated simulation and video export. HYSEIS shows its aftershock forecasts on an interactive Leaflet map, VISION shows probability charts, and the school system gives statistical dashboards of learners.",
+          "tools": [
+            "Leaflet maps",
+            "Matplotlib",
+            "ReportLab PDF reports",
+            "JavaScript",
+            "HTML and CSS"
+          ],
+          "projects": [
+            "retina",
+            "hyseis",
+            "school-information-system",
+            "vision"
+          ]
+        },
+        {
+          "title": "Rapid demos and front-end frameworks",
+          "description": "I turn models into quick demos and component-based interfaces with Streamlit, Gradio, React, TypeScript and Tailwind CSS.",
+          "tools": [
+            "Streamlit",
+            "Gradio",
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+          ],
+          "projects": [],
+          "review": "Condensed from the earlier 16-card list. No project evidence; keep only the tools you have used."
+        },
+        {
+          "title": "Development workflow",
+          "description": "I use version control, notebooks and scripting to keep my work organised and repeatable: Git and GitHub, Jupyter, VS Code, and PowerShell and Bash. In RETINA, I fix the random seeds so that the model results can be reproduced.",
+          "tools": [
+            "Git and GitHub",
+            "Jupyter",
+            "VS Code",
+            "PowerShell and Bash"
+          ],
+          "projects": [
+            "retina"
+          ],
+          "review": "Git/GitHub, Jupyter and VS Code use: no repository history was supplied."
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "letter": "F",
+      "title": "Mathematical Modelling, Research and Validation",
+      "nav": "Modelling and research",
+      "summary": "I turn a scientific question into defined, computable and testable quantities, and I have done this in RETINA and HYSEIS.",
+      "capabilities": [
+        {
+          "title": "Mathematical modelling and numerical analysis",
+          "description": "In RETINA, I implemented a box-counting fractal dimension (the least-squares slope of ln N(ε) against ln(1/ε)) and a 16-region local analysis of the vessel network. In HYSEIS, I applied the Omori–Utsu aftershock decay and Gutenberg–Richter magnitude–frequency models.",
+          "tools": [
+            "NumPy",
+            "Box-counting",
+            "Least-squares regression",
+            "Omori–Utsu",
+            "Gutenberg–Richter"
+          ],
+          "projects": [
+            "retina",
+            "hyseis"
+          ]
+        },
+        {
+          "title": "Statistical analysis and research design",
+          "description": "I frame measurable research questions and test the relationships between measures. In RETINA, I computed Pearson and Spearman correlations with p-values and r², standardised each deviation against a healthy reference with z-scores, and derived ROC / Youden's J cutoffs.",
+          "tools": [
+            "SciPy",
+            "Pearson and Spearman correlation",
+            "z-score standardisation",
+            "ROC / Youden's J"
+          ],
+          "projects": [
+            "retina"
+          ]
+        },
+        {
+          "title": "Experimental testing and evaluation",
+          "description": "I design evaluations and compare my results against references: cross-validated metrics in RETINA, and worked example scenarios and runs in HYSEIS and my MATLAB tool. Each of my projects states whether its evidence is source code, a demonstration or a competition result.",
+          "tools": [
+            "Cross-validation",
+            "Reference-based comparison",
+            "Example-scenario testing"
+          ],
+          "projects": [
+            "retina",
+            "hyseis",
+            "skin-lesion-matlab"
+          ],
+          "links": [
+            {
+              "label": "All projects",
+              "url": "/projects/"
+            }
+          ]
+        },
+        {
+          "title": "Technical documentation and communication",
+          "description": "I document designs, methods and results for different readers: project write-ups, a research study draft, a method article on how RETINA measures vessel complexity, and more than ten years of teaching engineering mathematics and mentoring student research.",
+          "tools": [
+            "Technical writing",
+            "Research mentoring",
+            "Teaching"
+          ],
+          "projects": [],
+          "links": [
+            {
+              "label": "Method article: how RETINA measures vessel complexity",
+              "url": "/articles/retina-vessel-complexity/"
+            },
+            {
+              "label": "About and experience",
+              "url": "/about/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "letter": "G",
+      "title": "Engineering Design and Fabrication",
+      "nav": "Engineering design",
+      "summary": "I design parts in CAD and build them with workshop equipment, 3D printers, laser cutters, CNC machines and electronic prototypes.",
+      "capabilities": [
+        {
+          "title": "Engineering design process",
+          "description": "I take a design from a defined need to a tested prototype.",
+          "does": [
+            "I state the requirements and constraints before I start designing.",
+            "I sketch concepts and model the chosen design in CAD.",
+            "I build a prototype and test it against the requirements.",
+            "I revise the model and rebuild until it meets them."
+          ],
+          "tools": [
+            "Requirements",
+            "Concept sketches",
+            "Prototype testing"
+          ],
+          "projects": [],
+          "review": "Generic wording of the design process; confirm it matches how you work."
+        },
+        {
+          "title": "CAD part and assembly modelling",
+          "description": "I am proficient in SolidWorks (my preferred software), Fusion 360 and equivalent CAD software.",
+          "does": [
+            "I build parts from dimensioned sketches using extrudes, cuts, holes and fillets.",
+            "I combine parts into assemblies with mates, and check fit and clearance before anything is made.",
+            "I model enclosures, housings and brackets for my electronic prototypes."
+          ],
+          "tools": [
+            "SolidWorks",
+            "Fusion 360",
+            "Parametric 3D modelling",
+            "Assemblies"
+          ],
+          "projects": [],
+          "review": "Confirm which CAD package you actually use, and add an example part."
+        },
+        {
+          "title": "Technical drawings and bills of materials",
+          "description": "I produce the documents that let a design be built.",
+          "does": [
+            "I create orthographic views (front, top and side) of parts and assemblies.",
+            "I create isometric views that show the whole object in one picture.",
+            "I add dimensions and notes so the part can be made correctly.",
+            "I assemble the bill of materials (BOM) in the CAD software, listing every part and quantity."
+          ],
+          "tools": [
+            "Orthographic views",
+            "Isometric views",
+            "Dimensioning",
+            "Bill of materials (BOM)"
+          ],
+          "projects": []
+        },
+        {
+          "title": "Digital fabrication: 3D printing, laser cutting and CNC",
+          "description": "I use the software that prepares a design for fabrication machines.",
+          "does": [
+            "I prepare models and run jobs on 3D printers, and check the fit of the printed parts.",
+            "I prepare 2D files for laser cutters to cut panels and plates.",
+            "I prepare toolpaths from the CAD model for CNC machines."
+          ],
+          "tools": [
+            "3D printing",
+            "Laser cutting",
+            "CNC machining",
+            "Slicer and toolpath software"
+          ],
+          "projects": [],
+          "review": "Name the printers, laser cutters and CNC machines you have used, and one part made on each."
+        },
+        {
+          "title": "Electronic prototyping with Arduino and breadboards",
+          "description": "I build and test circuits before they are made permanent.",
+          "does": [
+            "I wire components on a breadboard from a schematic.",
+            "I connect sensors and modules to an Arduino and load the firmware.",
+            "I measure voltages and continuity to find faults, then revise the circuit."
+          ],
+          "tools": [
+            "Arduino",
+            "Breadboard circuits",
+            "Sensors and modules",
+            "Multimeter testing"
+          ],
+          "links": [
+            {
+              "label": "Embedded systems and IoT skills",
+              "url": "/skills/#embedded"
+            }
+          ],
+          "projects": []
+        },
+        {
+          "title": "Hands-on workshop work",
+          "description": "I have hands-on experience with workshop equipment.",
+          "does": [
+            "I measure, cut, drill, fasten and assemble the physical parts of a prototype.",
+            "I fit the electronics into the finished enclosure and test the complete unit."
+          ],
+          "tools": [
+            "Workshop equipment",
+            "Hand and power tools",
+            "Measuring and marking",
+            "Assembly and fastening"
+          ],
+          "projects": [],
+          "review": "Name the equipment you use most (for example drill press, band saw, soldering station)."
+        }
+      ]
+    }
+  ],
+  "glance": [
+    "Python",
+    "OpenCV",
+    "scikit-learn",
+    "Flask",
+    "Arduino",
+    "ESP32",
+    "YOLOv11",
+    "SQL"
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "title": "Awards and Recognition",
+  "intro": "International and national recognition for the Smart Helmet, and for coaching student teams in research, robotics and intelligent machines.",
+  "awards": [
+    {
+      "id": "siif",
+      "short": "SIIF 2024",
+      "title": "Silver Prize, Seoul International Invention Fair 2024",
+      "level": "International",
+      "date": "27–30 November 2024",
+      "place": "COEX, Seoul, Republic of Korea",
+      "image": "award-siif",
+      "position": "50% 38%",
+      "credit": "",
+      "paragraphs": [
+        "The Smart Helmet, entered as “The Head Covering Emergency Alarm System, Life Saver and Monitoring Device”, received a Silver award at the Seoul International Invention Fair 2024. The Philippine Embassy in Seoul listed it among three Philippine inventions that won silver at the fair.",
+        "The helmet is a Raspberry Pi-based wearable that monitors signs of fatigue and dizziness, senses alcohol and supports emergency response. The entry was made under my name and a student co-inventor's, and the invention was developed with student researchers from Lanna National High School.",
+        "ABS-CBN News reported on the project on 14 December 2024 under the headline “Filipino students’ Smart Helmet makes an impact at Seoul inventors’ fair”."
+      ],
+      "sources": [
+        {
+          "label": "Philippine Embassy in Seoul: Filipino inventors win multiple awards at SIIF 2024",
+          "url": "https://philembassy-seoul.com/news/filipino-inventors-win-multiple-awards-at-the-seoul-international-invention-fair-siif-2024",
+          "note": "21 December 2024"
+        },
+        {
+          "label": "DFA Philippine Embassy in Seoul (advisory)",
+          "url": "https://seoulpe.dfa.gov.ph/2013-11-29-06-33-23/advisories/2275-filipino-inventors-win-multiple-awards-at-the-seoul-international-invention-fair-siif-2024",
+          "note": "Same announcement"
+        },
+        {
+          "label": "ABS-CBN News: Filipino students’ Smart Helmet makes an impact at Seoul inventors’ fair",
+          "url": "https://abs-cbn.com/news/nation/2024/12/14/filipino-students-smart-helmet-makes-an-impact-at-seoul-inventors-fair-1643",
+          "note": "14 December 2024"
+        },
+        {
+          "label": "DOST Region 02 announcement",
+          "url": "https://region2.dost.gov.ph/%f0%9d%90%82%f0%9d%90%a5%f0%9d%90%ae%f0%9d%90%ac%f0%9d%90%ad%f0%9d%90%9e%f0%9d%90%91%f0%9d%90%88%f0%9d%90%82%f0%9d%90%84-%f0%9d%90%9a%f0%9d%90%a7%f0%9d%90%9d-%f0%9d%90%8d%f0%9d%90%88%f0%9d%90%82/",
+          "note": "DOST Region 02"
+        }
+      ],
+      "project": "smart-helmet"
+    },
+    {
+      "id": "global",
+      "short": "DepEd 50th",
+      "title": "International Awardee for Coaching, 50th Golden Founding Anniversary of DepEd Region 02",
+      "level": "International",
+      "date": "",
+      "place": "",
+      "image": "award-global",
+      "position": "50% 38%",
+      "credit": "",
+      "paragraphs": [
+        "I was recognised as an International Awardee for Coaching during the 50th Golden Founding Anniversary of the Department of Education Region 02 (Cagayan Valley).",
+        "The celebration included a segment honouring international achievements. My recognition is for my international achievements as a coach of student inventors and researchers, including the Silver Prize that the Smart Helmet team won at the Seoul International Invention Fair 2024."
+      ],
+      "sources": [
+        {
+          "label": "Facebook post on the DepEd Region 02 50th Golden Founding Anniversary award",
+          "url": "https://www.facebook.com/share/p/1c6u2JD54v/",
+          "note": "Social media post"
+        }
+      ],
+      "project": "smart-helmet"
+    },
+    {
+      "id": "nice",
+      "short": "NICE 2024",
+      "title": "First Prize, SIBOL Award, National Invention Contest and Exhibits 2024",
+      "level": "National",
+      "date": "16–18 July 2024",
+      "place": "Pasay City, Metro Manila",
+      "image": "award-nice",
+      "position": "50% 52%",
+      "credit": "Photo: DOST Region 02",
+      "paragraphs": [
+        "The Smart Helmet won First Prize in Creative Research under the SIBOL Award, High School Level, at the National Invention Contest and Exhibits (NICE), organised by the Department of Science and Technology – Technology Application and Promotion Institute (DOST-TAPI).",
+        "DOST Region 02 reported that Lanna National High School in Tumauini, Isabela first earned the Outstanding Student Creative Research (SIBOL) Award at the regional ClusteRICE, which qualified the team for the national finals. I served as one of the team's coaches, with Jessie Jane P. Sibbaluca and Lilybeth R. Castro."
+      ],
+      "sources": [
+        {
+          "label": "DOST Region 02: LNHS bags SIBOL Award, 2024 National Invention Contests and Exhibits",
+          "url": "https://region2.dost.gov.ph/index.php/1095-lnhs-bags-sibol-award-2024-national-invention-contests-and-exhibits",
+          "note": "DOST Region 02"
+        },
+        {
+          "label": "DOST Region 02 (alternate link)",
+          "url": "https://region2.dost.gov.ph/lnhs-bags-sibol-award-2024-national-invention-contests-and-exhibits/",
+          "note": "Same article"
+        }
+      ],
+      "project": "smart-helmet"
+    },
+    {
+      "id": "presidential",
+      "short": "Presidential Awards",
+      "title": "SIBOL Award, 2024 NICE Presidential Awards",
+      "level": "National",
+      "date": "24 July 2024",
+      "place": "Sheraton Hotel Manila, Pasay City",
+      "image": "award-presidential",
+      "position": "50% 8%",
+      "credit": "Photo: DOST Region 02",
+      "paragraphs": [
+        "The SIBOL Award was presented at the 2024 NICE Presidential Awards, where the Smart Helmet team received the recognition from the President of the Philippines.",
+        "DOST Region 02 Regional Director Dr. Virginia G. Bilgera attended the ceremony together with student researchers from Lanna National High School. The team was supported by its coaches, including me as their mentor."
+      ],
+      "sources": [
+        {
+          "label": "DOST Region 02: 2024 NICE Presidential Awards",
+          "url": "https://region2.dost.gov.ph/2024-nice-presidential-awards/",
+          "note": "DOST Region 02"
+        },
+        {
+          "label": "DOST Region 02: LNHS bags SIBOL Award",
+          "url": "https://region2.dost.gov.ph/index.php/1095-lnhs-bags-sibol-award-2024-national-invention-contests-and-exhibits",
+          "note": "Team and coaches"
+        }
+      ],
+      "project": "smart-helmet"
+    },
+    {
+      "id": "nstf",
+      "short": "NSTF 2025 & 2026",
+      "title": "Finalist, National Science and Technology Fair 2025 and 2026",
+      "level": "National",
+      "date": "2025 and 10–13 March 2026",
+      "place": "Philippines",
+      "image": "award-nstf-2025",
+      "position": "50% 45%",
+      "credit": "",
+      "paragraphs": [
+        "The National Science and Technology Fair (NSTF), organised by the Department of Education, is the national platform where high school learners present research and innovation in science, technology, engineering and mathematics. I coached student teams that reached the national finals in both 2025 (“Towards a Shared Vision: Exploring the Future for a Better Tomorrow”) and 2026 (“Harnessing the Unknown: Powering the Future Through Science and Innovation”).",
+        "Two of the projects presented were VISION, the explainable medical image classification system, and HYSEIS, the hybrid seismology intelligence system, both shown by student researchers at the fair. I am also a winning coach under the Department of Education in Robotics and Intelligent Machine, and in Mathematics and Computational Science."
+      ],
+      "sources": [
+        {
+          "label": "Facebook post on the NSTF 2025 finalists",
+          "url": "https://www.facebook.com/share/19sGAw7oXg/",
+          "note": "Social media post"
+        },
+        {
+          "label": "Journal News: 2026 Nat’l Science and Technology Fair opens",
+          "url": "https://journalnews.com.ph/?p=357787",
+          "note": "12 March 2026"
+        },
+        {
+          "label": "Facebook post on the NSTF 2026 finalists",
+          "url": "https://www.facebook.com/share/p/1ByvmBfKFR/",
+          "note": "Social media post"
+        }
+      ],
+      "project": "vision",
+      "images": [
+        "award-nstf-2025",
+        "award-nstf",
+        "award-nstf-vision"
+      ],
+      "projects": [
+        "vision",
+        "hyseis"
+      ]
+    }
+  ],
+  "more": [
+    {
+      "title": "3× Champion, Regional Invention Contest and Exhibits",
+      "detail": "DOST-TAPI",
+      "certs": [
+        {
+          "key": "cert-01",
+          "caption": "Coach, Outstanding SIBOL Award, Regional Winner, 2019 Regional Invention Contest and Exhibits"
+        },
+        {
+          "key": "cert-02",
+          "caption": "SIBOL 1st Prize, 2024 National Invention Contest and Exhibits"
+        },
+        {
+          "key": "cert-03",
+          "caption": "Coach of the First Placer, STEMIE (Team), 2025 Regional Science and Technology Fair"
+        },
+        {
+          "key": "cert-04",
+          "caption": "Coach of the First Placer, Robotics and Intelligent Machines (Team), 2025 Regional Science and Technology Fair"
+        }
+      ]
+    },
+    {
+      "title": "Winning Coach, Department of Education",
+      "detail": "Robotics and Intelligent Machine; Mathematics and Computational Science",
+      "certs": [
+        {
+          "key": "cert-05",
+          "caption": "Best Presenter (Coach), Tuklas Research Project, Mathematics and Computational Science, 2023 Division Science and Technology Fair"
+        },
+        {
+          "key": "cert-06",
+          "caption": "Finalist Coach, National Science and Technology Fair 2025"
+        },
+        {
+          "key": "cert-07",
+          "caption": "First Place (Coach), Tuklas, Mathematics and Computational Science, 2023 Division Science and Technology Fair"
+        },
+        {
+          "key": "cert-03",
+          "caption": "Coach of the First Placer, STEMIE (Team), 2025 Regional Science and Technology Fair"
+        },
+        {
+          "key": "cert-04",
+          "caption": "Coach of the First Placer, Robotics and Intelligent Machines (Team), 2025 Regional Science and Technology Fair"
+        },
+        {
+          "key": "cert-08",
+          "caption": "Adviser, SIBOL Award Entry, 2020 National Invention Contest and Exhibits"
+        }
+      ]
+    },
+    {
+      "title": "Outstanding Teacher Performance",
+      "detail": "Career recognition",
+      "certs": [
+        {
+          "key": "cert-09",
+          "caption": "Outstanding Innovator, Municipality of Tumauini, 2023"
+        },
+        {
+          "key": "cert-10",
+          "caption": "Coach, Seoul International Invention Fair 2024 (Best Young Inventor Awardee)"
+        },
+        {
+          "key": "cert-11",
+          "caption": "International representation, Seoul International Invention Fair, DepEd Region 02, 2025"
+        },
+        {
+          "key": "cert-12",
+          "caption": "Most Outstanding Teacher, Lanna National High School, 2019"
+        },
+        {
+          "key": "cert-13",
+          "caption": "IPCRF School Year 2024 to 2025: Outstanding (final rating 4.962)"
+        },
+        {
+          "key": "cert-14",
+          "caption": "IPCRF School Year 2025 to 2026: Outstanding (final rating 5.000)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block head %}
+<script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) document.documentElement.classList.add("op");</script>
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "Person", "name": profile.name, "award": awards.awards|map(attribute="title")|list}|tojson }}</script>
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org", "@type": "Person", "name": profile.name, "honorificPrefix": "Engr.",
+  "jobTitle": "Registered Electronics Engineer", "email": "mailto:" ~ profile.email,
+  "address": {"@type": "PostalAddress", "addressRegion": "Isabela", "addressCountry": "PH"},
+  "alumniOf": [{"@type": "CollegeOrUniversity", "name": "St. Paul University, Philippines"}, {"@type": "CollegeOrUniversity", "name": "University of Saint Louis Tuguegarao, Philippines"}],
+  "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "Registered Electronics Engineer (ECE)", "recognizedBy": {"@type": "Organization", "name": "Professional Regulation Commission, Philippines"}}],
+  "worksFor": {"@type": "Organization", "name": "Lanna National High School"},
+  "knowsAbout": ["Electronics engineering", "Embedded systems", "Machine learning", "Image processing", "Engineering mathematics"]
+}|tojson }}</script>
+{% endblock %}
+
+{% block main %}
+<noscript><style>.type-ghost{visibility:visible!important}.type-live{display:none}.wave{opacity:1!important;animation:wave 2.6s ease-in-out .6s 3!important}</style></noscript>
+<div class="onepage">
+<div class="snap snap-home cine-wrap" id="home" data-label="Home">{% set H = 'h2' %}{% include "partials/s_cinema.html" %}</div>
+<div class="snap" id="about" data-label="About">{% set H = 'h2' %}{% include "partials/s_about.html" %}</div>
+<div class="snap" id="skills" data-label="Skills">{% set H = 'h2' %}{% include "partials/s_skills.html" %}</div>
+<div class="snap" id="projects" data-label="Projects">{% set H = 'h2' %}{% include "partials/s_projects.html" %}</div>
+<div class="snap" id="videos" data-label="Project Videos">{% set H = 'h2' %}{% include "partials/s_videos.html" %}</div>
+<div class="snap" id="awards" data-label="Awards">{% set H = 'h2' %}{% include "partials/s_awards.html" %}</div>
+<div class="snap" id="gallery" data-label="Photo Gallery">{% set H = 'h2' %}{% include "partials/s_gallery.html" %}</div>
+<div class="snap" id="contact" data-label="Contact">{% set H = 'h2' %}{% include "partials/s_contact.html" %}</div>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ u('/assets/js/home.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/skills.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/marquee.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/projects.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/videos.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/certs.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/awards.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/philosophy.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/cinema.js') }}?v={{ asset_v }}" defer></script>
+<script type="module" src="{{ u('/assets/js/cinema3d.js') }}?v={{ asset_v }}"></script>
+<script src="{{ u('/assets/js/onepage.js') }}?v={{ asset_v }}" defer></script>{% endblock %}

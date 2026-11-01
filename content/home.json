@@ -1,0 +1,30 @@
+{
+  "headline": "From sensor to decision.",
+  "stages": [
+    {
+      "n": "01", "label": "Sense",
+      "text": "Read the physical world with sensors and cameras.",
+      "tools": ["MAX30102", "MQ-2 gas sensor", "Accelerometer", "GPS", "Cameras"],
+      "projects": ["smart-helmet", "hydra"]
+    },
+    {
+      "n": "02", "label": "Process",
+      "text": "Clean, segment and measure the data.",
+      "tools": ["Python", "OpenCV", "NumPy", "Raspberry Pi"],
+      "projects": ["retina", "hydra"]
+    },
+    {
+      "n": "03", "label": "Learn",
+      "text": "Train models that classify, detect and forecast.",
+      "tools": ["U-Net", "YOLOv11", "SVM", "XGBoost", "CNN"],
+      "projects": ["hydra", "hyseis", "vision"]
+    },
+    {
+      "n": "04", "label": "Act",
+      "text": "Turn results into alerts, displays and automated actions.",
+      "tools": ["GSM alerts", "LCD display", "Water dispenser", "Web dashboards"],
+      "projects": ["smart-helmet", "hydra"]
+    }
+  ],
+  "recognition": ["siif", "global", "nice", "nstf"]
+}

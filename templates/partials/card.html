@@ -1,0 +1,17 @@
+{% macro card(p, eager=false, size="(min-width: 960px) 45vw, 92vw") %}
+<article class="card" data-name="{{ p.name|lower }}" data-order="{{ p.featuredOrder }}" data-year="{{ p.year or '' }}"
+         data-status="{{ p.statusGroup }}" data-tech="{{ p.tech|join('|') }}" data-search="{{ p.search }}">
+  <div class="card-media">
+    {{ img(p.thumbnail, sizes=size, loading=('eager' if eager else 'lazy'), max_w=1200) }}
+    {% if p.videos %}<span class="tag-video">▶ Video</span>{% endif %}
+  </div>
+  <div class="card-body">
+    <h3 class="card-title"><a href="{{ p.url }}" data-modal>{{ p.name }}</a></h3>
+    <p class="card-sum">{{ p.summary }}</p>
+    <ul class="chips" aria-label="Key technologies">{% for t in p.tags[:4] %}<li>{{ t }}</li>{% endfor %}</ul>
+    <p class="card-meta"><strong>Role</strong> · {{ p.role }}</p>
+    <p class="card-meta"><strong>{{ p.resultLabel or 'Outcome' }}</strong> · {{ p.result }}</p>
+    <p class="card-cta"><span aria-hidden="true">View Project →</span><span class="sr-only">View project: {{ p.name }}</span></p>
+  </div>
+</article>
+{% endmacro %}

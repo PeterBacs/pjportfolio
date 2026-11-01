@@ -1,0 +1,26 @@
+<section class="mq mq-projects" aria-labelledby="pcar-h">
+  <{{ H }} id="pcar-h" class="mq-title">Projects</{{ H }}>
+  <div class="carousel" mask id="projects-carousel" style="--items: {{ projects|length }}">
+    {% for p in projects %}
+    <article data-index="{{ loop.index0 }}" data-id="{{ p.slug }}" data-title="{{ p.name }}" style="--i: {{ projects|length - 1 - loop.index0 }}">
+      {{ img(p.thumbnail, sizes="300px", loading=('eager' if loop.index0 < 3 else 'lazy'), max_w=800) }}
+      <span class="mq-letter" aria-hidden="true">{{ loop.index }}</span>
+      {% if p.videos %}<span class="pcard-video" aria-hidden="true">▶ Video</span>{% endif %}
+      <h3>{{ p.name }}</h3>
+      <div>
+        <p>{{ p.summary }}</p>
+        <a class="mq-more" href="{{ p.url }}" data-modal aria-label="View project: {{ p.name }}">View project <span class="mq-n">{{ p.status }}</span></a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="mq-bar">
+    <button class="mq-arrow" type="button" id="pj-prev" aria-label="Previous projects"><span aria-hidden="true">←</span></button>
+    <button class="mq-toggle" type="button" id="pj-toggle" aria-pressed="false">Pause</button>
+    <button class="mq-arrow" type="button" id="pj-next" aria-label="Next projects"><span aria-hidden="true">→</span></button>
+    <span class="mq-hint">Scroll down to see SIP video presentation of my students.</span>
+  </div>
+</section>
+<noscript>
+  <ul class="pj-plain">{% for p in projects %}<li><a href="{{ p.url }}">{{ p.name }}</a></li>{% endfor %}</ul>
+</noscript>

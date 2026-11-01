@@ -1,0 +1,14 @@
+.venv/
+dist/
+__pycache__/
+.env
+.claude/
+# Large originals stay on your computer. The optimised copies in media/ are what gets published.
+Projects/
+Peter.jpg
+Resume.pdf
+
+# Working files and old upload bundle (kept locally, not published)
+_gen/
+Upload-to-Netlify.zip
+*.bak

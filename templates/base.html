@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="{{ profile.fullName }}">
+  {% if noindex or site_noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  {% if canonical is not none and site_url %}<link rel="canonical" href="{{ absu(canonical) }}">{% endif %}
+  <meta property="og:type" content="{{ 'article' if p is defined else 'website' }}">
+  <meta property="og:site_name" content="{{ profile.fullName }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  {% if site_url and canonical is not none %}<meta property="og:url" content="{{ absu(canonical) }}">{% endif %}
+  {% if og_image and site_url %}
+  <meta property="og:image" content="{{ og_for(og_image) }}">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ og_for(og_image) }}">
+  {% endif %}
+  <link rel="icon" href="{{ u('/assets/icon.svg') }}" type="image/svg+xml">
+  <link rel="preload" href="{{ u('/assets/fonts/ibm-plex-sans-400-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ u('/assets/fonts/ibm-plex-serif-500-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ u('/assets/fonts/space-grotesk-latin-700-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ u('/assets/css/style.css') }}?v={{ asset_v }}">
+  <link rel="stylesheet" href="{{ u('/assets/css/cinema.css') }}?v={{ asset_v }}">
+  {% if clarity_id %}
+  <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","{{ clarity_id }}");</script>
+  {% endif %}
+  {% block head %}{% endblock %}
+</head>
+<body{% if page == 'home' %} class="is-home"{% endif %}>
+  {% if page == 'home' %}<canvas id="core-canvas" aria-hidden="true"></canvas>{% endif %}
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="{{ u('/') }}" aria-label="My Portfolio, home">
+        <span class="brand-badge" aria-hidden="true">
+          <svg viewBox="0 0 160 160" focusable="false">
+            <defs><path id="brand-circle" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"/></defs>
+            <g class="brand-ring"><text><textPath href="#brand-circle" startOffset="0" textLength="372" lengthAdjust="spacing">ELECTRONICS ENGINEER · EDUCATOR · MENTOR · </textPath></text></g>
+          </svg>
+          <b>PJB</b>
+        </span>
+        <span class="brand-name">My Portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          {% for label, href, key in nav %}
+          <li{% if key == 'about' %} class="has-sub"{% endif %}><a href="{{ u(href) }}"{% if page == key %} aria-current="page"{% endif %}{% if key == 'about' %} aria-haspopup="true"{% endif %}>{{ label }}{% if key == 'about' %}<i class="caret" aria-hidden="true"></i>{% endif %}</a>
+          {% if key == 'about' %}
+            <ul class="subnav" aria-label="More about me">
+              <li><button type="button" data-resume><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M14 2v5h5"/><path d="M8 13h8M8 17h6"/></svg><span>View Résumé</span></button></li>
+              <li><a href="{{ u('/philosophy/') }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/><path d="M22 8v6"/></svg><span>My Teaching Philosophy</span></a></li>
+              <li><button type="button" data-ldm><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.500-2 10-.5V19c-2.500-1.500-6-1.500-10 .5-4-2-7.500-2-10-.5z"/><path d="M12 6v13.500"/></svg><span>Learning Delivery Modalities</span></button></li>
+            </ul>
+          {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {% block main %}{% endblock %}
+  </main>
+
+  <dialog id="project-modal" aria-label="Project details">
+    <div class="pm-bar">
+      <a class="pm-open" id="pm-open" href="#">Open full page</a>
+      <button class="lb-close" type="button" id="pm-close" aria-label="Close project">Close ✕</button>
+    </div>
+    <div id="pm-body"></div>
+  </dialog>
+
+  <dialog id="resume-modal" aria-label="Résumé">
+    <div class="pm-bar">
+      <strong>Résumé</strong>
+      <button class="lb-close" type="button" id="rm-close" aria-label="Close résumé">Close ✕</button>
+    </div>
+    <div class="rm-pages">
+      {% for pg in resume_pages %}<img data-src="{{ u('/media/img/' ~ pg.file) }}" width="{{ pg.w }}" height="{{ pg.h }}" alt="Résumé, page {{ loop.index }} of {{ resume_pages|length }}. The same details appear on the About page." decoding="async" draggable="false">{% endfor %}
+    </div>
+  </dialog>
+
+  <dialog id="ldm-modal" aria-label="Learning Delivery Modalities portfolio">
+    <div class="pm-bar">
+      <strong>Learning Delivery Modalities</strong>
+      <span class="ldm-tools">
+        <span class="ldm-page" id="ldm-page" aria-live="off">Page 1 of {{ ldm_pages|length }}</span>
+        <button class="ldm-zoom" type="button" id="ldm-out" aria-label="Zoom out">−</button>
+        <button class="ldm-zoom" type="button" id="ldm-in" aria-label="Zoom in">+</button>
+        <button class="lb-close" type="button" id="ldm-close" aria-label="Close portfolio">Close ✕</button>
+      </span>
+    </div>
+    <div class="rm-pages ldm-pages" id="ldm-pages">
+      {% for pg in ldm_pages %}<img data-src="{{ u('/media/img/' ~ pg.file) }}" width="{{ pg.w }}" height="{{ pg.h }}" alt="Learning Delivery Modalities portfolio, page {{ loop.index }} of {{ ldm_pages|length }}" loading="lazy" decoding="async" draggable="false">{% endfor %}
+    </div>
+  </dialog>
+
+  <dialog id="video-modal" aria-labelledby="vm-title">
+    <div class="pm-bar">
+      <strong id="vm-title">Video</strong>
+      <span class="vm-tools">
+        <span class="vm-count" id="vm-count" aria-hidden="true"></span>
+        <button class="ldm-zoom" type="button" id="vm-prev" aria-label="Previous video">←</button>
+        <button class="ldm-zoom" type="button" id="vm-next" aria-label="Next video">→</button>
+        <button class="lb-close" type="button" id="vm-close" aria-label="Close video">Close ✕</button>
+      </span>
+    </div>
+    <div class="vm-stage"><video id="vm-video" controls playsinline preload="none" controlslist="nodownload"></video></div>
+  </dialog>
+
+  <dialog id="lightbox" aria-label="Enlarged image">
+    <form method="dialog"><button class="lb-close" aria-label="Close enlarged image">Close ✕</button></form>
+    <figure><img alt="" id="lb-img"><figcaption id="lb-cap"></figcaption></figure>
+  </dialog>
+  <script src="{{ u('/assets/js/site.js') }}?v={{ asset_v }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

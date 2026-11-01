@@ -1,0 +1,49 @@
+{
+  "slug": "retina-vessel-complexity",
+  "title": "How RETINA measures the complexity of retinal blood vessels",
+  "description": "A plain-language walkthrough of RETINA's pipeline: from a fundus photograph to a fractal dimension, local measurements and a deviation index.",
+  "project": "retina",
+  "readingTime": "5 min read",
+  "lede": "A retinal photograph shows a branching network of blood vessels. Changes in that branching can be hard to judge by eye. RETINA turns the network into numbers, using a few steps that each have a clear mathematical meaning.",
+  "sections": [
+    {"id": "map", "title": "1. From photograph to vessel map", "blocks": [
+      {"type": "p", "text": "RETINA first resizes the image and works on its green channel. It improves local contrast with CLAHE (contrast-limited adaptive histogram equalisation) and smooths noise with a Gaussian blur. Black-hat morphology and a threshold then separate vessels from background, giving a binary map in which each pixel is either vessel or not."},
+      {"type": "flow", "caption": "", "steps": [
+        {"label": "Resize and green channel", "detail": "Standard size, one colour channel"},
+        {"label": "CLAHE and blur", "detail": "Local contrast, less noise"},
+        {"label": "Black-hat and threshold", "detail": "Vessel pixels versus background"},
+        {"label": "Binary vessel map", "detail": "V(x, y) is 0 or 1"}
+      ]}
+    ]},
+    {"id": "box", "title": "2. Counting boxes to measure complexity", "blocks": [
+      {"type": "p", "text": "The global fractal dimension, D, describes how completely the vessels fill the plane. RETINA covers the vessel map with square boxes of side ε and counts how many boxes, N(ε), contain at least one vessel pixel. It repeats this for smaller and smaller boxes."},
+      {"type": "p", "text": "For a network that fills space more fully, the count grows faster as the boxes shrink. D is the slope of the straight line fitted to ln N(ε) against ln(1/ε), and RETINA reports the fit quality (R²) alongside it. A simple line has D = 1 and a completely filled plane has D = 2, so a branching network falls between them."},
+      {"type": "p", "text": "As an arithmetic illustration only: if halving the box size multiplied the count by 3, the slope would be log₂ 3, about 1.58."}
+    ]},
+    {"id": "local", "title": "3. Looking at the network region by region", "blocks": [
+      {"type": "p", "text": "One number for the whole image can hide differences between regions. RETINA divides the vessel map into a 4×4 grid of 16 regions. For each region i it records the vessel density Pᵢ = Vᵢ / Aᵢ (vessel pixels over region area) and a local box-counting dimension αᵢ."},
+      {"type": "p", "text": "The multifractal spread, Δα = α<sub>max</sub> − α<sub>min</sub>, summarises how uneven the complexity is across the retina."}
+    ]},
+    {"id": "index", "title": "4. Comparing against a healthy reference", "blocks": [
+      {"type": "p", "text": "A measurement means more when compared with something. RETINA builds its healthy reference, D<sub>H</sub> and Δα<sub>H</sub>, from healthy images the user uploads. No reference values are fixed in the code. The deviations and the final index are then:"},
+      {"type": "table", "caption": "Quantities in the index", "headers": ["Quantity", "Definition"], "rows": [
+        ["Fractal deviation FD", "|D − D<sub>H</sub>| / D<sub>H</sub>"],
+        ["Multifractal deviation MD", "|Δα − Δα<sub>H</sub>| / Δα<sub>H</sub>"],
+        ["Microvascular Abnormality Index", "MAI = (FD + MD) / 2"]
+      ]},
+      {"type": "p", "text": "A higher MAI means the vessel network departs further from the healthy reference. Without any reference images the app still reports D and Δα, and it withholds FD, MD and MAI."}
+    ]},
+    {"id": "design", "title": "5. Keeping the maths traceable", "blocks": [
+      {"type": "ul", "items": [
+        "Every number is computed once in Python. The browser animation only plays back stored values and never recomputes them.",
+        "A Mathematics page shows each formula with the values from the current image substituted in.",
+        "Optional extras stay separate from the core measurements: a ROC / Youden's J cutoff from the user's own labelled analyses, and an experimental Random Forest trained on the computed features. Neither changes how D, Δα, FD, MD or MAI are calculated.",
+        "RETINA is a research prototype for study and teaching, not a clinical diagnostic."
+      ]},
+      {"type": "video", "id": "retina-demo"}
+    ]},
+    {"id": "next", "title": "6. Where it goes next", "blocks": [
+      {"type": "p", "text": "The next steps are to evaluate the index on a larger labelled dataset, report classification metrics, and benchmark the MAI against established vascular measures."}
+    ]}
+  ]
+}

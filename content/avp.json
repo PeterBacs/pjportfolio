@@ -1,0 +1,65 @@
+{
+  "title": "Science Investigatory Projects under my mentorship",
+  "items": [
+    {
+      "slug": "smart-helmet-avp",
+      "title": "Smart Helmet",
+      "file": "smart-helmet-avp.mp4",
+      "poster": "smart-helmet-avp-poster.webp",
+      "w": 960,
+      "h": 540,
+      "pw": 800,
+      "ph": 450,
+      "seconds": 300,
+      "mb": 15.0
+    },
+    {
+      "slug": "mais-avp",
+      "title": "Project MAIS",
+      "file": "mais-avp.mp4",
+      "poster": "mais-avp-poster.webp",
+      "w": 960,
+      "h": 540,
+      "pw": 800,
+      "ph": 450,
+      "seconds": 298,
+      "mb": 22.2
+    },
+    {
+      "slug": "vvasac-avp",
+      "title": "Project VVASAC",
+      "file": "vvasac-avp.mp4",
+      "poster": "vvasac-avp-poster.webp",
+      "w": 960,
+      "h": 540,
+      "pw": 800,
+      "ph": 450,
+      "seconds": 299,
+      "mb": 17.6
+    },
+    {
+      "slug": "hyseis-avp",
+      "title": "HYSEIS",
+      "file": "hyseis-avp.mp4",
+      "poster": "hyseis-avp-poster.webp",
+      "w": 960,
+      "h": 540,
+      "pw": 800,
+      "ph": 450,
+      "seconds": 142,
+      "mb": 6.6
+    },
+    {
+      "slug": "vision-avp",
+      "title": "VISION",
+      "file": "vision-avp.mp4",
+      "poster": "vision-avp-poster.webp",
+      "w": 960,
+      "h": 540,
+      "pw": 800,
+      "ph": 450,
+      "seconds": 138,
+      "mb": 5.2
+    }
+  ]
+}

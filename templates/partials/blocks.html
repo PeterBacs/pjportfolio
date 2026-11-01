@@ -1,0 +1,39 @@
+{% macro fig(id) %}
+  {% set r = registry.images[id] %}
+  <figure class="fig">
+    <a class="fig-open" href="{{ full_url(id) }}" data-caption="{{ r.caption|default(r.alt) }}" aria-label="Enlarge image: {{ r.alt }}">
+      {{ img(id, sizes="(min-width: 960px) 704px, 92vw", max_w=1200, alt=r.alt) }}
+    </a>
+    {% if r.caption %}<figcaption>{{ r.caption }}</figcaption>{% endif %}
+  </figure>
+{% endmacro %}
+
+{% macro vid(id) %}
+  {% set v = manifest.videos[id] %}
+  <figure class="fig video">
+    <video controls preload="metadata" playsinline width="{{ v.w }}" height="{{ v.h }}" poster="{{ u('/media/img/' ~ v.poster) }}">
+      <source src="{{ u('/media/video/' ~ v.file) }}" type="video/mp4">
+      Your browser cannot play this video. <a href="{{ u('/media/video/' ~ v.file) }}">Download the MP4</a>.
+    </video>
+    <figcaption>{{ v.title }} · {{ v.seconds // 60 }}:{{ '%02d'|format(v.seconds % 60) }}</figcaption>
+  </figure>
+{% endmacro %}
+
+{% macro block(b) %}
+  {% if b.type == "p" %}<p>{{ b.text|safe }}</p>
+  {% elif b.type == "ul" %}<ul class="prose-list">{% for i in b["items"] %}<li>{{ i|safe }}</li>{% endfor %}</ul>
+  {% elif b.type == "table" %}
+    <div class="table-wrap" tabindex="0" role="region" aria-label="{{ b.caption }}">
+    <table><caption>{{ b.caption }}</caption>
+      <thead><tr>{% for h in b.headers %}<th scope="col">{{ h }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in b.rows %}<tr>{% for c in r %}{% if loop.first %}<th scope="row">{{ c|safe }}</th>{% else %}<td>{{ c|safe }}</td>{% endif %}{% endfor %}</tr>{% endfor %}</tbody>
+    </table></div>
+  {% elif b.type == "flow" %}
+    <figure class="flow">
+      <ol>{% for s in b.steps %}<li><span class="step-n">{{ '%02d'|format(loop.index) }}</span><strong>{{ s.label }}</strong>{% if s.detail %}<span>{{ s.detail|safe }}</span>{% endif %}</li>{% endfor %}</ol>
+      {% if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
+    </figure>
+  {% elif b.type == "figure" %}{{ fig(b.id) }}
+  {% elif b.type == "video" %}{{ vid(b.id) }}
+  {% endif %}
+{% endmacro %}

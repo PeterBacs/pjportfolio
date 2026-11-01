@@ -1,0 +1,206 @@
+{
+  "roles": [
+    {
+      "slug": "electronics-embedded",
+      "nav": "Electronics, Embedded and IoT",
+      "blurb": "Sensor-based prototypes, microcontrollers and circuit simulation.",
+      "headline": "Electronics engineer building sensor-based embedded and IoT prototypes.",
+      "summary": "Registered Electronics Engineer with a Master of Science in Engineering (Electronics and Telecommunication). I integrate sensors, microcontrollers and displays into working prototypes, and mentor student teams through design, build and testing.",
+      "why": [
+        "PRC-registered Electronics Engineer, with a BS in Electronics Engineering and Computer Science.",
+        "Smart Helmet: coach and named inventor of a wearable safety prototype that won the Silver Prize at SIIF 2024 and the SIBOL First Prize at NICE 2024.",
+        "HYDRA: a kiosk that integrates a MAX30102 pulse oximeter and cameras with machine-learning analysis."
+      ],
+      "projects": [
+        {
+          "slug": "smart-helmet",
+          "why": "Raspberry Pi with MQ-2 gas, accelerometer, GPS and GSM modules, plus machine-learning risk analysis."
+        },
+        {
+          "slug": "hydra",
+          "why": "Eye camera, urine-strip camera, MAX30102 sensor and water dispenser in one kiosk."
+        }
+      ],
+      "skillSections": [
+        "embedded",
+        "design"
+      ],
+      "tools": [
+        "Raspberry Pi",
+        "Arduino",
+        "ESP32",
+        "MQ-2",
+        "GPS",
+        "GSM",
+        "I²C",
+        "SPI",
+        "UART",
+        "Proteus VSM"
+      ]
+    },
+    {
+      "slug": "robotics-automation",
+      "nav": "Robotics and Automation",
+      "blurb": "Automated prototypes, robot simulation and winning student robotics teams.",
+      "headline": "Engineer building automated prototypes and coaching winning robotics teams.",
+      "summary": "I develop microcontroller- and computer-controlled prototypes and work with robot simulators. I have trained in PLCs, SCADA and industrial robots, and I have coached student teams to wins in robotics and intelligent-machine contests.",
+      "why": [
+        "Winning Coach in Robotics and Intelligent Machine under the Department of Education.",
+        "HYDRA: an automated scan, analyse and dispense sequence that coordinates cameras, a pulse sensor and a pump.",
+        "Training in industrial automation: PLC, SCADA and industrial robots."
+      ],
+      "projects": [
+        {
+          "slug": "hydra",
+          "why": "A timed operating sequence across sensors, machine-learning analysis and a dispenser."
+        },
+        {
+          "slug": "smart-helmet",
+          "why": "Continuous monitoring and GSM emergency-alert behaviour in a Raspberry Pi wearable."
+        }
+      ],
+      "skillSections": [
+        "robotics",
+        "embedded"
+      ],
+      "tools": [
+        "Gazebo with ROS 2",
+        "NVIDIA Isaac Sim",
+        "CoppeliaSim",
+        "Webots",
+        "PLC",
+        "SCADA",
+        "Industrial robots",
+        "Arduino",
+        "ESP32",
+        "n8n"
+      ]
+    },
+    {
+      "slug": "applied-ai-ml",
+      "nav": "Applied AI and Machine Learning",
+      "blurb": "Computer vision, classification and prediction with web interfaces.",
+      "headline": "Applied AI and machine learning engineer focused on computer vision.",
+      "summary": "I build image-analysis and prediction systems end to end: segmentation, detection, classification, and web interfaces that return results with visual explanations.",
+      "why": [
+        "HYDRA: U-Net segmentation, YOLOv11 strip detection and an SVM classifier combined with sensor readings.",
+        "VISION: a CNN-based classifier whose predictions come with a probability chart and a Grad-CAM overlay.",
+        "RETINA: OpenCV feature extraction and a cross-validated Random Forest, implemented in Python."
+      ],
+      "projects": [
+        {
+          "slug": "hydra",
+          "why": "Multimodal machine learning: segmentation, object detection, classification and sensor data."
+        },
+        {
+          "slug": "retina",
+          "why": "End-to-end Python pipeline with feature extraction, cross-validation and a Flask interface."
+        },
+        {
+          "slug": "vision",
+          "why": "CNN image classification with probability output and Grad-CAM heatmaps."
+        },
+        {
+          "slug": "hyseis",
+          "why": "Gradient-boosted aftershock forecasting on historical earthquake data."
+        }
+      ],
+      "skillSections": [
+        "ai",
+        "software"
+      ],
+      "tools": [
+        "Python",
+        "OpenCV",
+        "scikit-learn",
+        "U-Net",
+        "YOLOv11",
+        "XGBoost",
+        "Grad-CAM",
+        "CVAT",
+        "Flask"
+      ]
+    },
+    {
+      "slug": "data-science",
+      "nav": "Data Science",
+      "blurb": "Feature engineering, statistics and forecasting from real measurements.",
+      "headline": "Data-driven engineer: feature engineering, statistics and forecasting.",
+      "summary": "I turn measurements into defined quantities, test them statistically and model them: fractal features from images, correlation analysis, forecasting from historical data, and SQL-backed analysis history.",
+      "why": [
+        "RETINA: engineered features, Pearson and Spearman correlations with p-values and r², z-score standardisation, and ROC / Youden's J cutoffs, all in Python.",
+        "HYSEIS: Omori–Utsu and Gutenberg–Richter models with XGBoost on historical earthquake data.",
+        "More than ten years of teaching engineering mathematics, which supports explaining models clearly."
+      ],
+      "projects": [
+        {
+          "slug": "retina",
+          "why": "Feature engineering, statistical tests, cross-validated classification and a SQLite analysis history."
+        },
+        {
+          "slug": "hyseis",
+          "why": "Forecasting aftershocks from historical data, shown on an interactive map."
+        },
+        {
+          "slug": "hydra",
+          "why": "Features from images combined with sensor readings in one classifier."
+        },
+        {
+          "slug": "school-information-system",
+          "why": "Statistical dashboards of learners by grade level and gender."
+        }
+      ],
+      "skillSections": [
+        "research",
+        "ai"
+      ],
+      "tools": [
+        "Python",
+        "NumPy",
+        "SciPy",
+        "scikit-learn",
+        "XGBoost",
+        "SQL",
+        "SQLite",
+        "Matplotlib"
+      ]
+    },
+    {
+      "slug": "mathematics-stem-teacher",
+      "nav": "Mathematics / STEM Teacher",
+      "blurb": "Licensed teacher of mathematics, physics and ICT who coaches student research and robotics.",
+      "headline": "Licensed mathematics and STEM teacher who connects classroom learning to engineering practice.",
+      "summary": "I teach General Mathematics, Calculus, Statistics and Probability, General Physics and Computer Systems Servicing to Senior High School students, using practical examples, collaborative activities and technology. I also coach student teams in research, robotics and innovation.",
+      "why": [
+        "Licensed Professional Teacher and Certified 6-12 Secondary Teacher with endorsement in Mathematics.",
+        "Teaching since 2017 at Lanna National High School: General Mathematics, Calculus, Statistics and Probability, General Physics and Computer Systems Servicing. Earlier, instructor in engineering and mathematics at Isabela State University.",
+        "MS Teaching (Mathematics), with an engineering background in Electronics and Computer Science, and a PhD in Educational Management in progress (candidate).",
+        "Winning Coach in Robotics and Intelligent Machine, and in Mathematics and Computational Science, under the Department of Education; coach of National Science and Technology Fair finalist teams in 2025 and 2026."
+      ],
+      "projects": [
+        {
+          "slug": "smart-helmet",
+          "why": "Coached student inventors to the Silver Prize at SIIF 2024 and the SIBOL First Prize at NICE 2024."
+        },
+        {
+          "slug": "school-information-system",
+          "why": "Web system that automates student records, attendance and grading for a school."
+        }
+      ],
+      "skillSections": [
+        "research"
+      ],
+      "toolsLabel": "Subjects and coaching areas",
+      "tools": [
+        "General Mathematics",
+        "Calculus",
+        "Statistics and Probability",
+        "General Physics",
+        "Computer Systems Servicing",
+        "Research coaching",
+        "Robotics and intelligent machines",
+        "Mathematics and computational science"
+      ]
+    }
+  ]
+}

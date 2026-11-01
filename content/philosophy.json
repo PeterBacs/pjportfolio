@@ -1,0 +1,98 @@
+{
+  "title": "Teaching Philosophy",
+  "lede": "I believe students learn best when they understand why they are learning something and how they can use it in real life.",
+  "intro": "My role is not only to explain concepts but also to give students opportunities to explore, ask questions, solve problems, and learn through experience.",
+  "principles": [
+    {
+      "n": "01",
+      "title": "Learning with purpose",
+      "tags": [
+        "Explore",
+        "Ask questions",
+        "Solve problems"
+      ],
+      "text": [
+        "I believe students learn best when they understand why they are learning something and how they can use it in real life. As a teacher, my role is not only to explain concepts but also to give students opportunities to explore, ask questions, solve problems, and learn through experience."
+      ]
+    },
+    {
+      "n": "02",
+      "title": "Learning by doing",
+      "tags": [
+        "Projects",
+        "Experiments",
+        "Design, build, test, improve"
+      ],
+      "text": [
+        "My background in engineering, mathematics, computer science, and research has shaped the way I teach. I like connecting lessons to practical situations and showing students how ideas learned in the classroom can be used in engineering and technology. Whenever possible, I use hands on activities, projects, experiments, and real world problems.",
+        "In areas such as electronics, robotics, IoT, automation, and programming, I believe students learn more when they are given the opportunity to design, build, test, and improve something themselves."
+      ]
+    },
+    {
+      "n": "03",
+      "title": "Meeting every learner",
+      "tags": [
+        "Demonstrations",
+        "Group work",
+        "Laboratory exercises",
+        "Independent practice"
+      ],
+      "text": [
+        "I also understand that students learn at different rates. Some students need more examples and guidance, while others are ready for more challenging tasks. I use demonstrations, guided activities, group work, laboratory exercises, and independent practice to help students develop their skills. I want students to feel comfortable asking questions and seeking help when they need it."
+      ]
+    },
+    {
+      "n": "04",
+      "title": "Learning from mistakes",
+      "tags": [
+        "Identify the problem",
+        "Test ideas",
+        "Try again"
+      ],
+      "text": [
+        "Mistakes are also an important part of learning, especially in engineering. A circuit that does not work, a program with an error, or a prototype that does not perform as expected can teach students a great deal.",
+        "Instead of simply giving them the answer, I encourage them to identify the problem, think about possible solutions, test their ideas, and try again. This helps develop patience, confidence, and problem solving skills."
+      ]
+    },
+    {
+      "n": "05",
+      "title": "Technology with a clear purpose",
+      "tags": [
+        "Simulations",
+        "Programming tools",
+        "Robotics",
+        "Responsible AI"
+      ],
+      "text": [
+        "Technology is an important part of my teaching, but I use it with a clear purpose. I use simulations, programming tools, interactive activities, robotics, and other technologies when they can help students better understand a concept or apply what they have learned.",
+        "I am also interested in helping students understand emerging technologies, including artificial intelligence, and how these tools can be used responsibly in engineering."
+      ]
+    },
+    {
+      "n": "06",
+      "title": "Assessment and feedback",
+      "tags": [
+        "Questions and discussion",
+        "Laboratory work",
+        "Presentations",
+        "Clear feedback"
+      ],
+      "text": [
+        "Assessment helps me understand what my students have learned and where they still need support. I use questions, discussions, short activities, laboratory work, projects, and presentations to check their understanding. I provide clear feedback so students know what they are doing well and what they need to improve."
+      ]
+    }
+  ],
+  "closing": {
+    "text": "Most importantly, I want my classroom to be a place where students feel respected, challenged, and supported. My goal is for students to leave my class with stronger technical knowledge, confidence in solving problems, and the willingness to continue learning.",
+    "quote": "Successful teaching means helping students become independent learners who can take what they have learned and use it to solve real problems."
+  },
+  "paragraphs": [
+    "I believe students learn best when they understand why they are learning something and how they can use it in real life. As a teacher, my role is not only to explain concepts but also to give students opportunities to explore, ask questions, solve problems, and learn through experience.",
+    "My background in engineering, mathematics, computer science, and research has shaped the way I teach. I like connecting lessons to practical situations and showing students how ideas learned in the classroom can be used in engineering and technology. Whenever possible, I use hands on activities, projects, experiments, and real world problems. In areas such as electronics, robotics, IoT, automation, and programming, I believe students learn more when they are given the opportunity to design, build, test, and improve something themselves.",
+    "I also understand that students learn at different rates. Some students need more examples and guidance, while others are ready for more challenging tasks. I use demonstrations, guided activities, group work, laboratory exercises, and independent practice to help students develop their skills. I want students to feel comfortable asking questions and seeking help when they need it.",
+    "Mistakes are also an important part of learning, especially in engineering. A circuit that does not work, a program with an error, or a prototype that does not perform as expected can teach students a great deal. Instead of simply giving them the answer, I encourage them to identify the problem, think about possible solutions, test their ideas, and try again. This helps develop patience, confidence, and problem solving skills.",
+    "Technology is an important part of my teaching, but I use it with a clear purpose. I use simulations, programming tools, interactive activities, robotics, and other technologies when they can help students better understand a concept or apply what they have learned. I am also interested in helping students understand emerging technologies, including artificial intelligence, and how these tools can be used responsibly in engineering.",
+    "Assessment helps me understand what my students have learned and where they still need support. I use questions, discussions, short activities, laboratory work, projects, and presentations to check their understanding. I provide clear feedback so students know what they are doing well and what they need to improve.",
+    "Most importantly, I want my classroom to be a place where students feel respected, challenged, and supported. My goal is for students to leave my class with stronger technical knowledge, confidence in solving problems, and the willingness to continue learning. For me, successful teaching means helping students become independent learners who can take what they have learned and use it to solve real problems."
+  ]
+}

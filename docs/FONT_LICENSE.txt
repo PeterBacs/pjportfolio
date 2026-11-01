@@ -1,0 +1,2 @@
+Creative Commons Attribution Non-commercial Share Alike license (http://creativecommons.org/licenses/by-nc-sa/3.0/).
+TESLA.ttf (static/fonts/tesla-regular.woff2) is supplied by the site owner and licensed CC BY-NC-SA 3.0. Use is limited to non-commercial purposes; credit the font authors and keep the same licence for derived font files.

@@ -1,0 +1,363 @@
+{
+  "title": "Tech stack",
+  "items": [
+    {
+      "id": "cpp",
+      "name": "C++",
+      "color": "#00599C",
+      "icons": [
+        "cplusplus"
+      ]
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "color": "#0175C2",
+      "icons": [
+        "dart"
+      ]
+    },
+    {
+      "id": "html5",
+      "name": "HTML5",
+      "color": "#E34F26",
+      "icons": [
+        "html5"
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "color": "#ED8B00",
+      "icons": [
+        "openjdk",
+        "java"
+      ]
+    },
+    {
+      "id": "css3",
+      "name": "CSS3",
+      "color": "#1572B6",
+      "icons": [
+        "css3",
+        "css"
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "color": "#F7DF1E",
+      "icons": [
+        "javascript"
+      ]
+    },
+    {
+      "id": "markdown",
+      "name": "Markdown",
+      "color": "#000000",
+      "icons": [
+        "markdown"
+      ]
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "color": "#777BB4",
+      "icons": [
+        "php"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "color": "#3776AB",
+      "icons": [
+        "python"
+      ]
+    },
+    {
+      "id": "cuda",
+      "name": "CUDA",
+      "color": "#76B900",
+      "icons": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "color": "#092E20",
+      "icons": [
+        "django"
+      ]
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "color": "#02569B",
+      "icons": [
+        "flutter"
+      ]
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "color": "#000000",
+      "icons": [
+        "flask"
+      ]
+    },
+    {
+      "id": "joomla",
+      "name": "Joomla",
+      "color": "#5091CD",
+      "icons": [
+        "joomla"
+      ]
+    },
+    {
+      "id": "apache",
+      "name": "Apache",
+      "color": "#D22128",
+      "icons": [
+        "apache"
+      ]
+    },
+    {
+      "id": "airflow",
+      "name": "Apache Airflow",
+      "color": "#017CEE",
+      "icons": [
+        "apacheairflow"
+      ]
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "color": "#4479A1",
+      "icons": [
+        "mysql"
+      ]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "color": "#47A248",
+      "icons": [
+        "mongodb"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "color": "#003B57",
+      "icons": [
+        "sqlite"
+      ]
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe",
+      "color": "#FF0000",
+      "icons": [
+        "adobe"
+      ]
+    },
+    {
+      "id": "illustrator",
+      "name": "Adobe Illustrator",
+      "color": "#FF9A00",
+      "icons": [
+        "adobeillustrator"
+      ]
+    },
+    {
+      "id": "photoshop",
+      "name": "Adobe Photoshop",
+      "color": "#31A8FF",
+      "icons": [
+        "adobephotoshop"
+      ]
+    },
+    {
+      "id": "premiere",
+      "name": "Adobe Premiere Pro",
+      "color": "#9999FF",
+      "icons": [
+        "adobepremierepro"
+      ]
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "color": "#F24E1E",
+      "icons": [
+        "figma"
+      ]
+    },
+    {
+      "id": "canva",
+      "name": "Canva",
+      "color": "#00C4CC",
+      "icons": [
+        "canva"
+      ]
+    },
+    {
+      "id": "keras",
+      "name": "Keras",
+      "color": "#D00000",
+      "icons": [
+        "keras"
+      ]
+    },
+    {
+      "id": "matplotlib",
+      "name": "Matplotlib",
+      "color": "#FFFFFF",
+      "icons": [
+        "matplotlib"
+      ]
+    },
+    {
+      "id": "numpy",
+      "name": "NumPy",
+      "color": "#013243",
+      "icons": [
+        "numpy"
+      ]
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "color": "#150458",
+      "icons": [
+        "pandas"
+      ]
+    },
+    {
+      "id": "plotly",
+      "name": "Plotly",
+      "color": "#3F4F75",
+      "icons": [
+        "plotly"
+      ]
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "color": "#EE4C2C",
+      "icons": [
+        "pytorch"
+      ]
+    },
+    {
+      "id": "sklearn",
+      "name": "scikit-learn",
+      "color": "#F7931E",
+      "icons": [
+        "scikitlearn"
+      ]
+    },
+    {
+      "id": "scipy",
+      "name": "SciPy",
+      "color": "#8CAAE6",
+      "icons": [
+        "scipy"
+      ]
+    },
+    {
+      "id": "tensorflow",
+      "name": "TensorFlow",
+      "color": "#FF6F00",
+      "icons": [
+        "tensorflow"
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "color": "#000000",
+      "icons": [
+        "notion"
+      ]
+    },
+    {
+      "id": "powerbi",
+      "name": "Power BI",
+      "color": "#F2C811",
+      "icons": [
+        "powerbi"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "title": "Languages and markup",
+      "description": "I write in these languages for firmware, analysis, interfaces and data work.",
+      "ids": [
+        "cpp",
+        "dart",
+        "html5",
+        "java",
+        "css3",
+        "javascript",
+        "markdown",
+        "php",
+        "python",
+        "cuda"
+      ]
+    },
+    {
+      "title": "Frameworks and servers",
+      "description": "I build web applications and automated workflows with these frameworks and servers. Flask runs my RETINA application.",
+      "ids": [
+        "django",
+        "flutter",
+        "flask",
+        "joomla",
+        "apache",
+        "airflow"
+      ]
+    },
+    {
+      "title": "Databases",
+      "description": "I store and query data in these relational and document databases. RETINA keeps its analysis history in SQLite.",
+      "ids": [
+        "mysql",
+        "mongodb",
+        "sqlite"
+      ]
+    },
+    {
+      "title": "Data science and machine learning",
+      "description": "I analyse data and train models with these numerical, plotting and deep-learning libraries and business-intelligence tools, as in RETINA, VISION and HYSEIS.",
+      "ids": [
+        "numpy",
+        "pandas",
+        "scipy",
+        "matplotlib",
+        "plotly",
+        "sklearn",
+        "keras",
+        "tensorflow",
+        "pytorch",
+        "powerbi"
+      ]
+    },
+    {
+      "title": "Design and productivity",
+      "description": "I use these graphics, video, interface-design and documentation tools to present my work.",
+      "ids": [
+        "adobe",
+        "illustrator",
+        "photoshop",
+        "premiere",
+        "figma",
+        "canva",
+        "notion"
+      ]
+    }
+  ]
+}

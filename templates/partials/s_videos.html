@@ -1,0 +1,26 @@
+<section class="mq mq-videos" aria-labelledby="avp-h">
+  <{{ H }} id="avp-h" class="mq-title avp-title">{{ avp.title }}</{{ H }}>
+  <div class="carousel" mask id="videos-carousel" style="--items: {{ avp["items"]|length }}">
+    {% for v in avp["items"] %}
+    <article data-index="{{ loop.index0 }}" data-id="{{ v.slug }}" data-title="{{ v.title }}" data-src="{{ u('/media/video/' ~ v.file) }}" data-poster="{{ u('/media/img/' ~ v.poster) }}" style="--i: {{ avp["items"]|length - 1 - loop.index0 }}">
+      <img src="{{ u('/media/img/' ~ v.poster) }}" width="{{ v.pw }}" height="{{ v.ph }}" alt="" loading="{{ 'eager' if loop.index0 < 3 else 'lazy' }}" decoding="async">
+      <span class="mq-letter" aria-hidden="true">{{ loop.index }}</span>
+      <span class="avp-play" aria-hidden="true"><i></i></span>
+      <h3>{{ v.title }}</h3>
+      <div>
+        <p>Student AVP, {{ v.seconds // 60 }}:{{ '%02d'|format(v.seconds % 60) }}</p>
+        <button class="mq-more" type="button" aria-label="Play video: {{ v.title }}">Play video <span class="mq-n">{{ v.seconds // 60 }}:{{ '%02d'|format(v.seconds % 60) }}</span></button>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="mq-bar">
+    <button class="mq-arrow" type="button" id="vd-prev" aria-label="Previous videos"><span aria-hidden="true">←</span></button>
+    <button class="mq-toggle" type="button" id="vd-toggle" aria-pressed="false">Pause</button>
+    <button class="mq-arrow" type="button" id="vd-next" aria-label="Next videos"><span aria-hidden="true">→</span></button>
+    <span class="mq-hint">Use the arrows to move through the videos. Select a card to play it.</span>
+  </div>
+</section>
+<noscript>
+  <ul class="pj-plain">{% for v in avp["items"] %}<li><a href="{{ u('/media/video/' ~ v.file) }}">{{ v.title }} (video)</a></li>{% endfor %}</ul>
+</noscript>

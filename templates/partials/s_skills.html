@@ -1,0 +1,85 @@
+{% macro badges(items) %}<ul class="stack">{% for t in items %}<li class="badge{% if t.color|lower == '#ffffff' %} badge-light{% endif %}" style="--bg: {{ t.color }}; --fg: {{ t.fg }}">{% if t.path %}<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="{{ t.path }}"/></svg>{% endif %}<span>{{ t.name }}</span></li>{% endfor %}</ul>{% endmacro %}
+
+{% macro capcard(c) %}
+<article class="cap-card">
+  <h4>{{ c.title }}</h4>
+  <p class="cap-desc">{{ c.description }}</p>
+  {% if c.does %}<p class="cap-label">What I do</p><ul class="cap-does">{% for d in c.does %}<li>{{ d }}</li>{% endfor %}</ul>{% endif %}
+  {% if c.tools %}<p class="cap-label">Tools and methods</p><ul class="chips">{% for t in c.tools %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+  {% if c.byPurpose %}<p class="cap-label">By purpose</p><dl class="purpose">{% for b in c.byPurpose %}<div><dt>{{ b.purpose }}</dt><dd>{{ b.tools }}</dd></div>{% endfor %}</dl>{% endif %}
+  {% if c.projects or c.links %}<p class="cap-label">Project evidence</p>
+  <ul class="cap-evidence">
+    {% for slug in c.projects %}<li><a href="{{ by_slug[slug].url }}" data-modal>{{ by_slug[slug].name }}</a> <span class="ev">{{ by_slug[slug].evidence }}</span></li>{% endfor %}
+    {% for l in c.links %}<li><a href="{{ u(l.url) }}">{{ l.label }}</a></li>{% endfor %}
+  </ul>{% endif %}
+  {% if c.context %}<p class="cap-context"><strong>Experience</strong> {{ c.context }}</p>{% endif %}
+</article>
+{% endmacro %}
+
+{% macro content(s) %}
+<p class="section-summary">{{ s.summary }}</p>
+{% if s.capabilities %}<div class="cap-grid">{% for c in s.capabilities %}{{ capcard(c) }}{% endfor %}</div>
+{% else %}{% for g in techgroups %}<section class="stack-group"><h4>{{ g.title }}</h4><p class="cap-desc">{{ g.description }}</p>{{ badges(g["items"]) }}</section>{% endfor %}{% endif %}
+{% endmacro %}
+
+{% set stack_section = {"id": "stack", "letter": "H", "title": techstack.title, "nav": "Tech stack", "summary": "The languages, frameworks, databases, data tools and design software I work with.", "capabilities": []} %}
+{% set all_sections = skills.sections + [stack_section] %}
+{% set visuals = {
+  "embedded": {"image": "skill-a"},
+  "robotics": {"image": "skill-b"},
+  "ai": {"image": "skill-c"},
+  "design": {"image": "skill-d"},
+  "software": {"image": "skill-e"},
+  "research": {"image": "skill-f"},
+  "engineering": {"image": "skill-eng"},
+  "stack": {"image": "skill-g"}
+} %}
+
+<section class="mq" aria-labelledby="sc-h">
+  <{{ H }} id="sc-h" class="mq-title">{{ skills.title }}</{{ H }}>
+  <div class="carousel" mask id="skills-carousel" style="--items: {{ all_sections|length }}">
+    {% for s in all_sections %}
+    <article data-index="{{ loop.index0 }}" data-id="{{ s.id }}" data-letter="{{ s.letter }}" data-title="{{ s.title }}" style="--i: {{ all_sections|length - 1 - loop.index0 }}">
+      {{ img(visuals[s.id].image, sizes="300px", loading=('eager' if loop.index0 < 3 else 'lazy'), max_w=800) }}
+      <span class="mq-letter" aria-hidden="true">{{ s.letter }}</span>
+      <h3>{{ s.title }}</h3>
+      <div>
+        <p>{{ s.summary }}</p>
+        <button class="mq-more" type="button" aria-label="Read more: section {{ s.letter }}, {{ s.title }}">Read more <span class="mq-n">{% if s.capabilities %}{{ s.capabilities|length }} capabilities{% else %}{{ techstack["items"]|length }} tools{% endif %}</span></button>
+      </div>
+      <div class="scard-full">{{ content(s) }}</div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="mq-bar">
+    <button class="mq-arrow" type="button" id="mq-prev" aria-label="Previous skills"><span aria-hidden="true">←</span></button>
+    <button class="mq-toggle" type="button" id="mq-toggle" aria-pressed="false">Pause</button>
+    <button class="mq-arrow" type="button" id="mq-next" aria-label="Next skills"><span aria-hidden="true">→</span></button>
+    <span class="mq-hint">Use the arrows to move through the skills. Select Read more to open a section.</span>
+  </div>
+</section>
+
+<section class="wrap skills-fallback" aria-label="All skills">
+  {% for s in all_sections %}
+  <section class="skill-section" id="{{ s.id }}" aria-labelledby="{{ s.id }}-h">
+    <header class="skill-section-head">
+      <span class="section-letter" aria-hidden="true">{{ s.letter }}</span>
+      <div><h2 id="{{ s.id }}-h">{{ s.title }}</h2></div>
+    </header>
+    {{ content(s) }}
+  </section>
+  {% endfor %}
+</section>
+
+<dialog id="skill-modal" aria-labelledby="sm-title">
+  <div class="pm-bar">
+    <span class="pm-label" id="sm-section"></span>
+    <div class="sm-nav">
+      <button class="sbtn sbtn-lite" type="button" id="sm-prev" aria-label="Previous section"><span aria-hidden="true">←</span></button>
+      <span class="scount" id="sm-count"></span>
+      <button class="sbtn sbtn-lite" type="button" id="sm-next" aria-label="Next section"><span aria-hidden="true">→</span></button>
+      <button class="lb-close" type="button" id="sm-close" aria-label="Close section">Close ✕</button>
+    </div>
+  </div>
+  <div class="sm-wrap"><div id="sm-body" class="sm-content"></div></div>
+</dialog>

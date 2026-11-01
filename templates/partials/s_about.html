@@ -1,0 +1,17 @@
+
+
+<section class="abt-hero" aria-labelledby="abt-title">
+  <div class="wrap abt-hero-grid">
+    <figure class="abt-portrait">{{ img('peter', sizes='(min-width: 960px) 22rem, 60vw', loading='eager', fetchpriority='high') }}</figure>
+    <div class="abt-intro">
+      <p class="abt-kicker">About me</p>
+      <{{ H }} id="abt-title">{{ profile.fullName }}</{{ H }}>
+      {% for b in profile.bio %}<p class="abt-bio">{{ b }}</p>{% endfor %}
+    </div>
+  </div>
+  <div class="wrap">
+    <ul class="abt-facts" aria-label="At a glance">
+      {% for f in profile.aboutFacts %}<li><span>{{ f.k }}{% if f.note %}<small>{{ f.note }}</small>{% endif %}</span>{% for line in (f.v if f.v is not string else [f.v]) %}<strong>{{ line }}</strong>{% endfor %}</li>{% endfor %}
+    </ul>
+  </div>
+</section>

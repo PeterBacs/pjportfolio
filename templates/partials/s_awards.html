@@ -1,0 +1,121 @@
+{% macro article(a, tid) %}
+<header>
+  <p class="award-meta"><span class="pill-level">{{ a.level }}</span>{% if a.date %}<span>{{ a.date }}</span>{% endif %}{% if a.place %}<span>{{ a.place }}</span>{% endif %}</p>
+  <h2 id="{{ tid }}">{{ a.title }}</h2>
+</header>
+<div class="award-body">
+  <div class="award-text">
+    {% for para in a.paragraphs %}<p>{{ para }}</p>{% endfor %}
+    <p class="award-actions">
+      <a class="btn btn-small" data-lightbox href="{{ full_url(a.image) }}" data-caption="{{ registry.images[a.image].caption }}" aria-label="View the full photo: {{ a.short }}">View full photo</a>
+      {% for slug in (a.projects or ([a.project] if a.project else [])) %}<a class="btn btn-small" href="{{ by_slug[slug].url }}" data-modal>View the {{ by_slug[slug].name }} project</a>{% endfor %}
+    </p>
+    {% if a.credit %}<p class="small muted">{{ a.credit }}</p>{% endif %}
+  </div>
+  <aside class="award-sources" aria-label="Sources">
+    <h3>Sources</h3>
+    <ul>
+      {% for s in a.sources %}
+      <li><a href="{{ s.url }}" target="_blank" rel="noopener noreferrer">{{ s.label }} <span aria-hidden="true">↗</span></a>{% if s.note %}<span class="src-note">{{ s.note }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </aside>
+</div>
+{% endmacro %}
+
+<section class="awards-hero" aria-labelledby="awards-title">
+  <div class="wrap">
+    <{{ H }} id="awards-title">{{ awards.title }}</{{ H }}>
+  </div>
+
+  <div class="carousel" id="carousel" role="group" aria-roledescription="carousel" aria-label="Award photographs">
+    <div class="stage">
+      <div class="deck">
+        {% for a in awards.awards %}
+        <figure class="slide" data-index="{{ loop.index0 }}" data-id="{{ a.id }}" style="--pos: {{ a.position }}">
+          {% set imgs = a.images or [a.image] %}{% for im in imgs %}<span class="ph{% if loop.first %} on{% endif %}">{{ img(im, sizes="(min-width: 960px) 26rem, 78vw", loading=('eager' if (loop.first and loop.index0 < 3) else 'lazy'), max_w=1400) }}</span>{% endfor %}
+          <figcaption class="slide-cap"><span class="slide-level">{{ a.level }}</span><strong>{{ a.short }}</strong></figcaption>
+          <button class="slide-open" type="button" aria-label="Read the article: {{ a.title }}"></button>
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="carousel-bar">
+      <button class="cbtn" type="button" data-dir="-1" aria-label="Previous award"><span aria-hidden="true">←</span></button>
+      <ol class="cdots" aria-label="Choose an award">
+        {% for a in awards.awards %}
+        <li><button type="button" class="cdot" data-go="{{ loop.index0 }}">{{ a.short }}</button></li>
+        {% endfor %}
+      </ol>
+      <button class="cbtn" type="button" data-dir="1" aria-label="Next award"><span aria-hidden="true">→</span></button>
+      <button class="cplay" type="button" id="cplay" aria-pressed="false" hidden>Pause</button>
+    </div>
+  </div>
+</section>
+
+<section class="section award-details" aria-label="Award articles" id="details">
+  <div class="wrap">
+    {% for a in awards.awards %}
+    <article class="award-article" id="award-{{ a.id }}" aria-labelledby="t-{{ a.id }}">
+      {{ article(a, 't-' ~ a.id) }}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section more-recognition" aria-labelledby="more-h">
+  <div class="wrap">
+    <h2 id="more-h">More recognition</h2>
+    <ul class="more-grid">
+      {% for m in awards.more %}<li>{% if m.certs %}<button type="button" class="more-card" data-certs="{{ loop.index0 }}" aria-haspopup="dialog" aria-label="{{ m.title }}: view {{ m.certs|length }} certificates"><strong>{{ m.title }}</strong><span>{{ m.detail }}</span><em class="more-cta" aria-hidden="true">View {{ m.certs|length }} certificates →</em></button>{% else %}<strong>{{ m.title }}</strong><span>{{ m.detail }}</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<dialog id="award-modal" aria-label="Award article">
+  <div class="pm-bar">
+    <span class="pm-label">Award</span>
+    <button class="lb-close" type="button" id="am-close" aria-label="Close article">Close ✕</button>
+  </div>
+  <div id="am-body" class="am-body"></div>
+</dialog>
+
+{% for a in awards.awards %}
+<template id="tpl-{{ a.id }}">
+  <figure class="am-figure" style="--pos: {{ a.position }}">
+    {% set imgs = a.images or [a.image] %}{% for im in imgs %}<span class="ph{% if loop.first %} on{% endif %}">{{ img(im, sizes="(min-width: 960px) 900px, 92vw", max_w=1400) }}</span>{% endfor %}
+  </figure>
+  <div class="am-article">{{ article(a, 'am-title') }}</div>
+</template>
+{% endfor %}
+
+<dialog id="cert-modal" aria-labelledby="cm-title">
+  <div class="pm-bar">
+    <strong id="cm-title">Certificates</strong>
+    <button class="lb-close" type="button" id="cm-close" aria-label="Close certificates">Close ✕</button>
+  </div>
+  <div class="cm-body">
+    {% for m in awards.more if m.certs %}
+    <section class="mq mq-certs" data-group="{{ loop.index0 }}" data-heading="{{ m.title }}" hidden>
+      <p class="cm-sub">{{ m.title }}<span>{{ m.detail }}</span></p>
+      <div class="carousel" mask id="certs-carousel-{{ loop.index0 }}" style="--items: {{ m.certs|length }}">
+        {% for c in m.certs %}
+        <article style="--i: {{ m.certs|length - 1 - loop.index0 }}">
+          <img src="{{ img_url(c.key, 900) }}" srcset="{{ img_srcset(c.key) }}" sizes="380px" alt="{{ img_alt(c.key) }}" width="{{ manifest.images[c.key].w }}" height="{{ manifest.images[c.key].h }}" decoding="async">
+          <span class="mq-letter" aria-hidden="true">{{ loop.index }}</span>
+          <h3>{{ c.caption }}</h3>
+          <div><a class="mq-more" href="{{ img_url(c.key, 1600) }}" data-lightbox data-caption="{{ c.caption }}">Enlarge <span class="mq-n">{{ loop.index }} / {{ m.certs|length }}</span></a></div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="mq-bar">
+        <button class="mq-arrow" type="button" id="cm-prev-{{ loop.index0 }}" aria-label="Previous certificates"><span aria-hidden="true">←</span></button>
+        <button class="mq-toggle" type="button" id="cm-toggle-{{ loop.index0 }}" aria-pressed="false">Pause</button>
+        <button class="mq-arrow" type="button" id="cm-next-{{ loop.index0 }}" aria-label="Next certificates"><span aria-hidden="true">→</span></button>
+        <span class="mq-hint">Select a certificate to enlarge it.</span>
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</dialog>

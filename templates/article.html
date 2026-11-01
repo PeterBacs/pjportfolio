@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "partials/blocks.html" import block %}
+{% block head %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org", "@type": "Article", "headline": a.title, "description": a.description,
+  "author": {"@type": "Person", "name": profile.name}
+}|tojson }}</script>
+{% endblock %}
+{% block main %}
+<article class="article">
+  <header class="page-head article-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ u('/projects/') }}">Projects</a> / <a href="{{ by_slug[a.project].url }}">{{ by_slug[a.project].name }}</a> / <span aria-current="page">Method article</span></nav>
+      <h1>{{ a.title }}</h1>
+      <p class="lede">{{ a.lede }}</p>
+      <p class="small muted">{{ profile.fullName }} · {{ a.readingTime }}</p>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="prose article-body">
+      {% for s in a.sections %}
+      <section id="{{ s.id }}" aria-labelledby="{{ s.id }}-h">
+        <h2 id="{{ s.id }}-h">{{ s.title }}</h2>
+        {% for b in s.blocks %}{{ block(b) }}{% endfor %}
+      </section>
+      {% endfor %}
+      <p class="more"><a class="link-arrow" href="{{ by_slug[a.project].url }}" data-modal>See the full {{ by_slug[a.project].name }} project →</a></p>
+    </div>
+  </div>
+</article>
+{% endblock %}

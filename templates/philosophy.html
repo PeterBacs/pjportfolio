@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head %}
+<script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) document.documentElement.classList.add("pgm");</script>
+{% endblock %}
+
+{% block main %}
+<section class="pg-simple pg-solo" aria-labelledby="pg-title">
+  <div class="wrap">
+    <article class="pg-text">
+      <p class="pg-back"><a href="{{ u('/#about') }}">← Back to About me</a></p>
+      <h1 id="pg-title">{{ philosophy.title }}</h1>
+      {% for t in philosophy.paragraphs %}<p>{{ t }}</p>{% endfor %}
+      <p class="pg-more"><a class="btn btn-primary" href="{{ u('/#gallery') }}">See the photo gallery</a></p>
+    </article>
+  </div>
+</section>
+{% endblock %}

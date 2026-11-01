@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block main %}{% set H = 'h1' %}{% include "partials/s_projects.html" %}{% set H = 'h2' %}{% include "partials/s_videos.html" %}{% endblock %}
+{% block scripts %}<script src="{{ u('/assets/js/marquee.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/projects.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/videos.js') }}?v={{ asset_v }}" defer></script>{% endblock %}

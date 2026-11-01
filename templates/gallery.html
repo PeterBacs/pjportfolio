@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block head %}
+<script>if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) document.documentElement.classList.add("pgm");</script>
+{% endblock %}
+
+{% block main %}
+{% set H = 'h1' %}{% include "partials/s_gallery.html" %}
+{% endblock %}
+{% block scripts %}<script src="{{ u('/assets/js/philosophy.js') }}?v={{ asset_v }}" defer></script>{% endblock %}

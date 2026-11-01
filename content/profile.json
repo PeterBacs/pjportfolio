@@ -1,0 +1,199 @@
+{
+  "name": "Peter John R. Bacani",
+  "honorific": "Engr.",
+  "fullName": "Engr. Peter John R. Bacani",
+  "headline": "Registered Electronics Engineer and Licensed Professional Teacher in the Philippines building robotics, embedded, IoT, machine learning and deep learning projects.",
+  "shortTitle": "Electronics Engineer · Engineering Educator",
+  "location": "Isabela, Philippines",
+  "email": "pjfreelance02@gmail.com",
+  "social": [
+    { "id": "facebook", "name": "Facebook", "handle": "oturanpeter.denposhi", "url": "https://www.facebook.com/oturanpeter.denposhi" },
+    { "id": "linkedin", "name": "LinkedIn", "handle": "peter-john-bacani", "url": "https://www.linkedin.com/in/peter-john-bacani-0783332ab" },
+    { "id": "instagram", "name": "Instagram", "handle": "@bacs16", "url": "https://www.instagram.com/bacs16/" }
+  ],
+  "intro": [
+    "I hold a Master of Science in Engineering and have more than ten years of teaching experience. My projects span machine-learning image analysis, wearable safety electronics, sensor-based prototypes and mathematical modelling."
+  ],
+  "targetRoles": [
+    "Electronics engineering",
+    "Embedded systems and IoT",
+    "Robotics and automation",
+    "Applied AI and machine learning",
+    "Research and development",
+    "Testing and product engineering"
+  ],
+  "summaryFromResume": "Certified engineering educator with over 10 years of teaching experience in secondary and higher education and a multidisciplinary background in Electronics Engineering, Computer Science, Mathematics and STEM education. Experienced in mentoring research, robotics and innovation projects involving prototype development, system testing, data analysis and technical documentation.",
+  "credentials": [
+    {
+      "title": "Registered Electronics Engineer (ECE)",
+      "issuer": "Professional Regulation Commission (PRC), Philippines"
+    },
+    {
+      "title": "Certified Teacher, Grades 6–12 Secondary, endorsement in Mathematics",
+      "issuer": "Professional Regulation Commission (PRC), Philippines"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Philosophy major in Educational Management (Candidate)",
+      "school": "St. Paul University, Philippines"
+    },
+    {
+      "degree": "Master of Science in Engineering, Electronics and Telecommunication Engineering",
+      "school": "University of Saint Louis Tuguegarao, Philippines"
+    },
+    {
+      "degree": "Master of Science in Teaching major in Mathematics",
+      "school": "St. Paul University, Philippines"
+    },
+    {
+      "degree": "Units in Education",
+      "school": "HGB College, Philippines"
+    },
+    {
+      "degree": "Bachelor of Science in Electronics Engineering and Computer Science",
+      "school": "St. Paul University, Philippines"
+    }
+  ],
+  "experience": [
+    {
+      "role": "11th and 12th Grade Mathematics / STEM Teacher",
+      "org": "Lanna National High School, Philippines",
+      "period": "May 2017 – Present",
+      "points": [
+        "Deliver technology-integrated STEM instruction that combines mathematics, research, computing and engineering applications.",
+        "Mentor research, robotics and innovation projects covering system design, prototyping, experimentation, testing, data analysis and technical documentation.",
+        "Use project-based learning and real-world engineering contexts. Reported 20–25% improvement in student performance and approximately 90% mastery of targeted competencies from data-driven instruction and targeted support."
+      ]
+    },
+    {
+      "role": "Engineering Instructor",
+      "org": "Isabela State University, Philippines",
+      "period": "Nov 2015 – Apr 2017",
+      "points": [
+        "Taught engineering and higher-level mathematics, connecting mathematical concepts to practical engineering applications.",
+        "Used analytical exercises, technology-supported instruction and formative assessment to prepare students for advanced mathematics and engineering coursework."
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Silver Prize, Seoul International Invention Fair (SIIF) 2024",
+      "detail": "Smart Helmet, a student invention from Lanna National High School. South Korea.",
+      "project": "smart-helmet",
+      "link": {
+        "url": "https://region2.dost.gov.ph/%f0%9d%90%82%f0%9d%90%a5%f0%9d%90%ae%f0%9d%90%ac%f0%9d%90%ad%f0%9d%90%9e%f0%9d%90%91%f0%9d%90%88%f0%9d%90%82%f0%9d%90%84-%f0%9d%90%9a%f0%9d%90%a7%f0%9d%90%9d-%f0%9d%90%8d%f0%9d%90%88%f0%9d%90%82/",
+        "label": "DOST announcement"
+      }
+    },
+    {
+      "title": "SIBOL invention award",
+      "detail": "Smart Helmet. Presented by the President of the Philippines.",
+      "project": "smart-helmet",
+      "link": {
+        "url": "https://region2.dost.gov.ph/2024-nice-presidential-awards/",
+        "label": "DOST announcement"
+      }
+    },
+    {
+      "title": "Champion, National Invention Contest and Exhibit 2024",
+      "detail": "",
+      "project": null,
+      "link": {
+        "url": "https://region2.dost.gov.ph/lnhs-bags-sibol-award-2024-national-invention-contests-and-exhibits/",
+        "label": "DOST announcement"
+      }
+    },
+    {
+      "title": "2× Finalist, National Science and Technology Fair",
+      "detail": "Department of Education (DepEd)",
+      "project": null,
+      "link": {
+        "url": "https://www.facebook.com/share/p/1ByvmBfKFR/",
+        "label": "Facebook post"
+      }
+    },
+    {
+      "title": "3× Champion, Regional Invention Contest and Exhibit",
+      "detail": "DOST-TAPI",
+      "project": null
+    },
+    {
+      "title": "Winning Coach, Department of Education",
+      "detail": "Robotics and Intelligent Machine; Mathematics and Computational Science",
+      "project": null
+    },
+    {
+      "title": "Outstanding Teacher Performance",
+      "detail": "",
+      "project": null
+    }
+  ],
+  "competencies": [
+    "Electronics Engineering",
+    "Embedded Systems",
+    "Robotics and Automation",
+    "Internet of Things (IoT)",
+    "Computer Systems",
+    "Programming",
+    "Engineering Mathematics",
+    "AI and Machine Learning Applications",
+    "Research and Development",
+    "Prototype Development and Testing",
+    "Data and Statistical Analysis",
+    "Technical Documentation",
+    "Laboratory Management",
+    "Research Mentoring",
+    "Technical Communication",
+    "Project Management"
+  ],
+  "bio": [
+    "I am a certified STEM educator with over 10 years of teaching experience in secondary and higher education. My background spans Electronics Engineering, Computer Science, and Mathematics. I hold a Master of Science in Engineering and a Master of Science in Teaching major in Mathematics, and I am currently pursuing a doctorate in Educational Management.",
+    "My interests include mathematical investigation and modeling, embedded systems, robotics, IoT, automation, programming, artificial intelligence, and machine learning. I bring these into the classroom through research and hands on projects that strengthen students’ analytical, problem solving, and technical skills. I also mentor student researchers, guiding them through prototype development, system testing, data analysis, and technical documentation.",
+    "Through formative assessment, data informed instruction, and targeted academic support, I have helped improve student performance by 20 to 25%, with approximately 90% mastery of targeted learning competencies."
+  ],
+  "strengths": [
+    {
+      "title": "Problem solving",
+      "text": "Engineering mathematics and modelling underpin my project work, from fractal analysis to seismic decay models."
+    },
+    {
+      "title": "Experimentation",
+      "text": "Prototype building and system testing are part of my teaching and my mentoring of competition teams."
+    },
+    {
+      "title": "Collaboration",
+      "text": "Mentoring student teams means scoping work with people at different levels and keeping documentation consistent."
+    },
+    {
+      "title": "Technical communication",
+      "text": "Ten years of explaining mathematics and engineering shapes how I write: define the problem, state what was built, show what was demonstrated."
+    }
+  ],
+  "aboutFacts": [
+    {
+      "k": "Licences",
+      "v": [
+        "PRC - Registered Electronics Engineer",
+        "PRC - Licensed Professional Teacher and Certified 6-12 Secondary Teacher with endorsement in Mathematics"
+      ]
+    },
+    {
+      "k": "Teaching",
+      "v": "10+ years, secondary and higher education"
+    },
+    {
+      "k": "Degrees",
+      "note": "(U.S. equivalency)",
+      "v": [
+        "MS Electronics and Telecommunications Engineering",
+        "MS Teaching (Mathematics)",
+        "PhD Educational Management (candidate)"
+      ]
+    },
+    {
+      "k": "Based in",
+      "v": "Isabela, Philippines"
+    }
+  ]
+}

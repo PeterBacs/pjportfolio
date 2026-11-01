@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block head %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org", "@type": "Person", "name": profile.name,
+  "award": awards.awards|map(attribute="title")|list
+}|tojson }}</script>
+{% endblock %}
+{% block main %}{% set H = 'h1' %}{% include "partials/s_awards.html" %}{% endblock %}
+{% block scripts %}<script src="{{ u('/assets/js/awards.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/marquee.js') }}?v={{ asset_v }}" defer></script>
+<script src="{{ u('/assets/js/certs.js') }}?v={{ asset_v }}" defer></script>{% endblock %}

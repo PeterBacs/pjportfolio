@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block head %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org", "@type": "CreativeWork", "name": p.fullTitle, "description": p.summary,
+  "author": {"@type": "Person", "name": profile.name}, "keywords": p.tech|join(', ')
+}|tojson }}</script>
+{% endblock %}
+
+{% macro block(b) %}
+  {% if b.type == "p" %}<p>{{ b.text|safe }}</p>
+  {% elif b.type == "ul" %}<ul class="prose-list">{% for i in b["items"] %}<li>{{ i|safe }}</li>{% endfor %}</ul>
+  {% elif b.type == "table" %}
+    <div class="table-wrap" tabindex="0" role="region" aria-label="{{ b.caption }}">
+    <table><caption>{{ b.caption }}</caption>
+      <thead><tr>{% for h in b.headers %}<th scope="col">{{ h }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in b.rows %}<tr>{% for c in r %}{% if loop.first %}<th scope="row">{{ c|safe }}</th>{% else %}<td>{{ c|safe }}</td>{% endif %}{% endfor %}</tr>{% endfor %}</tbody>
+    </table></div>
+  {% elif b.type == "flow" %}
+    <figure class="flow">
+      <ol>{% for s in b.steps %}<li><span class="step-n">{{ '%02d'|format(loop.index) }}</span><strong>{{ s.label }}</strong>{% if s.detail %}<span>{{ s.detail|safe }}</span>{% endif %}</li>{% endfor %}</ol>
+      {% if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
+    </figure>
+  {% elif b.type == "figure" %}{{ fig(b.id) }}
+  {% elif b.type == "gallery" %}<div class="gallery">{% for i in b.ids %}{{ fig(i) }}{% endfor %}</div>
+  {% endif %}
+{% endmacro %}
+
+{% macro fig(id) %}
+  {% set r = registry.images[id] %}
+  <figure class="fig">
+    <a class="fig-open" href="{{ full_url(id) }}" data-caption="{{ r.caption|default(r.alt) }}" aria-label="Enlarge image: {{ r.alt }}">
+      {{ img(id, sizes="(min-width: 960px) 704px, 92vw", max_w=1200, alt=r.alt) }}
+    </a>
+    {% if r.caption %}<figcaption>{{ r.caption }}</figcaption>{% endif %}
+  </figure>
+{% endmacro %}
+
+{% macro vid(v) %}
+  <figure class="fig video">
+    <video controls preload="metadata" playsinline width="{{ v.w }}" height="{{ v.h }}" poster="{{ u('/media/img/' ~ v.poster) }}">
+      <source src="{{ u('/media/video/' ~ v.file) }}" type="video/mp4">
+      Your browser cannot play this video. <a href="{{ u('/media/video/' ~ v.file) }}">Download the MP4</a>.
+    </video>
+    <figcaption>{{ v.title }} · {{ v.seconds // 60 }}:{{ '%02d'|format(v.seconds % 60) }} · <a href="{{ u('/media/video/' ~ v.file) }}" data-download="{{ v.file }}">Download ({{ (v.bytes/1000000)|round(1) }} MB)</a></figcaption>
+  </figure>
+{% endmacro %}
+
+{% block main %}
+<article class="project">
+  <header class="project-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ u('/projects/') }}">Projects</a> / <span aria-current="page">{{ p.name }}</span></nav>
+      <div class="head-grid">
+        <div>
+          <h1>{{ p.fullTitle }}</h1>
+          <p class="lede">{{ p.summary }}</p>
+          <ul class="pills">
+            <li><strong>{{ p.status }}</strong></li>
+            <li>Role · {{ p.role }}</li>
+            {% if p.year %}<li>{{ p.year }}</li>{% endif %}
+          </ul>
+          <ul class="chips" style="margin-top:1rem">{% for t in p.tech %}<li>{{ t }}</li>{% endfor %}</ul>
+        </div>
+        <figure class="hero-fig">
+          <a class="fig-open" href="{{ full_url(p.thumbnail) }}" data-caption="{{ p.name }}" aria-label="Enlarge project image">
+            {{ img(p.thumbnail, sizes="(min-width: 960px) 52vw, 92vw", loading="eager", fetchpriority="high", max_w=1672) }}
+          </a>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap project-body">
+    <aside class="toc" aria-label="On this page">
+      <ol>
+        {% if p.videos_resolved %}<li><a href="#video">Video</a></li>{% endif %}
+        {% for s in p.sections %}<li><a href="#{{ s.id }}">{{ s.title }}</a></li>{% endfor %}
+        <li><a href="#materials">Documents</a></li>
+      </ol>
+    </aside>
+
+    <div class="prose">
+      {% if p.videos_resolved %}
+      <section id="video" class="demo" aria-labelledby="video-h">
+        <h2 id="video-h">Video</h2>
+        {% for v in p.videos_resolved %}{{ vid(v) }}{% endfor %}
+      </section>
+      {% endif %}
+
+      {% for s in p.sections %}
+      <section id="{{ s.id }}" aria-labelledby="{{ s.id }}-h">
+        <h2 id="{{ s.id }}-h">{{ s.title }}</h2>
+        {% for b in s.blocks %}{{ block(b) }}{% endfor %}
+      </section>
+      {% endfor %}
+
+      <section id="materials" aria-labelledby="materials-h">
+        <h2 id="materials-h">Documents</h2>
+        <ul class="materials">
+          {% for d in p.docs_resolved %}<li><a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.label }}</a> <span class="muted">PDF · {{ d.size }}</span></li>{% endfor %}
+          {% for rl in p.related %}<li><a href="{{ u(rl.url) }}">{{ rl.label }}</a></li>{% endfor %}
+        </ul>
+      </section>
+
+      <nav class="pn" aria-label="More projects">
+        {% if p.prev %}<a class="pn-prev" href="{{ p.prev.url }}"><span>Previous</span><strong>{{ p.prev.name }}</strong></a>{% else %}<span></span>{% endif %}
+        {% if p.next %}<a class="pn-next" href="{{ p.next.url }}"><span>Next</span><strong>{{ p.next.name }}</strong></a>{% endif %}
+      </nav>
+    </div>
+  </div>
+</article>
+{% endblock %}

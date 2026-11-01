@@ -1,0 +1,40 @@
+<section class="pg-hero gl" aria-labelledby="gl-title">
+  <{{ H }} id="gl-title" class="sr-only">{{ gallery.title }}</{{ H }}>
+
+  <div class="wrap">
+    <div class="pg" id="pg" role="group" aria-roledescription="carousel" aria-label="Photographs of teaching, mentoring and student research">
+      <div class="pg-stage" tabindex="0" aria-label="Photo gallery. Use the left and right arrow keys, swipe, or scroll sideways to change the photo.">
+        {% for g in gallery["items"] %}
+        <figure class="pg-slide{% if loop.first %} is-active{% endif %}" data-i="{{ loop.index0 }}" data-caption="{{ g.caption }}">
+          <div class="pg-bgd" data-bg="{{ img_url(g.key, 640) }}"></div>
+          {% if loop.index0 < 2 %}
+            {{ img(g.key, sizes="(min-width: 960px) 62rem, 94vw", loading=('eager' if loop.first else 'lazy'), fetchpriority=('high' if loop.first else None), cls="pg-fg") }}
+          {% else %}
+            <img class="pg-fg" data-src="{{ img_url(g.key, 1100) }}" data-srcset="{{ img_srcset(g.key) }}" sizes="(min-width: 960px) 62rem, 94vw" alt="{{ img_alt(g.key) }}" width="{{ manifest.images[g.key].w }}" height="{{ manifest.images[g.key].h }}" decoding="async">
+          {% endif %}
+        </figure>
+        {% endfor %}
+        <div class="pg-shade" aria-hidden="true"></div>
+        <div class="pg-meta">
+          <p class="pg-cap" aria-live="off">{{ gallery["items"][0].caption }}</p>
+          <p class="pg-count" aria-hidden="true"><b>01</b> / {{ '%02d'|format(gallery["items"]|length) }}</p>
+        </div>
+        <button class="pg-nav pg-prev" type="button" data-dir="-1" aria-label="Previous photo"><span aria-hidden="true">←</span></button>
+        <button class="pg-nav pg-next" type="button" data-dir="1" aria-label="Next photo"><span aria-hidden="true">→</span></button>
+        <div class="pg-bar" aria-hidden="true"><i></i></div>
+      </div>
+
+      <div class="pg-controls">
+        <button class="pg-play" type="button" aria-pressed="false">Pause</button>
+        <div class="pg-rail" role="list" aria-label="All photographs, scroll sideways">
+          {% for g in gallery["items"] %}
+          <button class="pg-thumb{% if loop.first %} is-active{% endif %}" type="button" role="listitem" data-go="{{ loop.index0 }}" aria-label="Show photo {{ loop.index }}: {{ g.caption }}">
+            {{ img(g.key, sizes="120px", loading="lazy", max_w=640, alt="", cls="pg-th") }}
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+      <noscript><p class="pg-nojs">Turn on JavaScript to play the photo gallery.</p></noscript>
+    </div>
+  </div>
+</section>

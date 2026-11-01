@@ -1,0 +1,30 @@
+{
+  "heroAlt": "Portrait of Engr. Peter John R. Bacani in a black suit, white shirt and navy tie, standing in a dark studio with floating holographic workflow nodes.",
+  "scenes": [
+    {
+      "id": "engineer",
+      "label": "Engineer and Math Educator",
+      "text": "A Registered Electronics Engineer and Certified Grades 6 to 12 Mathematics Teacher, I turn circuits, code and mathematics into working systems, from the first schematic to a tested prototype."
+    },
+    {
+      "id": "teacher",
+      "label": "STEM Teacher",
+      "text": "With more than 10 years in the classroom, I teach STEM so that students do not only learn the formulas. They design, test and build solutions of their own."
+    },
+    {
+      "id": "handson",
+      "label": "Hands-on Learning",
+      "text": "I focus on project-based, hands-on learning that develops creativity, critical thinking and analytical skills, as students build real robots, circuits and prototypes."
+    },
+    {
+      "id": "tech",
+      "label": "Technology-Based Instruction",
+      "text": "I use advanced, technology-based instruction, from simulations, programming and data analysis to AI tools, to make complex ideas clear and prepare students for the future."
+    }
+  ],
+  "roles": [
+    "Electronics Engineer",
+    "Mathematics and STEM Teacher",
+    "Mentor"
+  ]
+}

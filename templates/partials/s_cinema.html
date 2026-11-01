@@ -1,0 +1,28 @@
+<section class="cine" id="cine" aria-labelledby="hero-title">
+  <div class="cine-stage">
+    <div class="cine-layer cine-bg" role="img" aria-label="{{ cinema.heroAlt }}" data-count="121" data-frames="{{ u('/assets/hero/orbit/f') }}" data-frames-m="{{ u('/assets/hero/orbit-m/f') }}">
+      <picture>
+        <source media="(max-width: 700px) and (orientation: portrait)" srcset="{{ u('/assets/hero/orbit-m/f000.webp') }}">
+        <img src="{{ u('/assets/hero/orbit/f000.webp') }}" width="1920" height="1080" alt="" fetchpriority="high" decoding="async">
+      </picture>
+      <canvas id="cine-frames" aria-hidden="true"></canvas>
+    </div>
+    <div class="cine-shade" aria-hidden="true"></div>
+    <div class="cine-copy">
+      <h1 id="hero-title" class="cine-hi"><span class="sr-only">Hi! I'm Peter. {{ cinema.roles|join(', ') }}.</span><span class="type" aria-hidden="true"><span class="type-ghost">Hi! I'm Peter</span><span class="type-live"></span></span> <span class="wave" aria-hidden="true">👋</span></h1>
+      <p class="cine-roles">{% for r in cinema.roles %}<span>{{ r }}</span>{% endfor %}</p>
+      <p class="cine-lede">This portfolio brings together my work in engineering, teaching, and mentoring student research. From making mathematical concepts meaningful to turning ideas into working prototypes and complete systems, it reflects my commitment to helping learners think critically, solve real-world problems, and create with purpose.</p>
+      <div class="cine-cta"><a class="cx-btn cx-btn-primary" href="{{ u('/contact/') }}">Contact Me</a></div>
+    </div>
+    <ol class="cine-scenes" aria-label="What drives my work">
+      {% for s in cinema.scenes %}
+      <li class="cine-scene" data-scene="{{ loop.index0 }}">
+        <span class="cine-tag">{{ '%02d' % loop.index }} / {{ s.label }}</span>
+        <p>{{ s.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="cine-hint" aria-hidden="true"><span>Scroll</span><i></i></div>
+    <div class="cine-meter" aria-hidden="true"><b></b></div>
+  </div>
+</section>

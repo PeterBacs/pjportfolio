@@ -1,0 +1,978 @@
+{
+  "_comment": "Registry of every image/video/document used on the site. 'src' paths are relative to the portfolio root and point at your untouched originals. Run tools/optimize_media.py after editing.",
+  "images": {
+    "peter": {
+      "src": "Peter.jpg",
+      "widths": [
+        320,
+        640,
+        960
+      ],
+      "alt": "Portrait of Engr. Peter John R. Bacani in a dark suit, white shirt and navy tie against a light grey background.",
+      "kind": "photo"
+    },
+    "thumb-hydra": {
+      "src": "Projects/Hydra/Hydra Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a person's hand on a finger pulse sensor beside a camera and a laptop showing an eye image, a segmentation mask and physiological waveforms.",
+      "kind": "illustration"
+    },
+    "thumb-smart-helmet": {
+      "src": "Projects/Smart Helmet/Smart Helmet Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a black motorcycle helmet with attached electronics on a workbench beside a laptop showing sensor graphs and a route map.",
+      "kind": "illustration"
+    },
+    "thumb-retina": {
+      "src": "Projects/Retina Fractal Analysis/Retina Fractal Analyisis Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a researcher viewing a monitor with a retinal fundus photograph, a binary vessel map, a box-counting grid and analysis plots.",
+      "kind": "illustration"
+    },
+    "thumb-hyseis": {
+      "src": "Projects/HYSEIS/HYSEIS  project Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a laptop showing a map of the Philippines with earthquake epicentres, a seismogram trace and a 3D terrain view.",
+      "kind": "illustration"
+    },
+    "thumb-safaris": {
+      "src": "Projects/Farming Guide Using AI/Farming Guide Using AI Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a tablet in a greenhouse showing crop images, soil and weather indicators and charts, beside a notebook and a trowel of soil.",
+      "kind": "illustration"
+    },
+    "thumb-vision": {
+      "src": "Projects/Medical Images Classification/Medical Images Classification Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a clinician viewing brain MRI slices with highlighted regions and a chest X-ray with two boxed areas on a wide monitor.",
+      "kind": "illustration"
+    },
+    "thumb-skin": {
+      "src": "Projects/Skin Disease Detection using Matlab/Skin Disease Sytem Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a laptop showing a skin lesion photograph, its segmented outline, grayscale versions and histogram plots, beside a microscope.",
+      "kind": "illustration"
+    },
+    "thumb-school-system": {
+      "src": "Projects/Information and Management System/Information and Management System Thumbnail.png",
+      "widths": [
+        480,
+        800,
+        1200,
+        1672
+      ],
+      "alt": "Illustration of a desktop monitor showing an administrative dashboard with summary tiles, a bar chart, a donut chart and a records table.",
+      "kind": "illustration"
+    },
+    "hydra-concept": {
+      "src": "Projects/Hydra/HYDRA.jpg",
+      "widths": [
+        800,
+        1312
+      ],
+      "alt": "The HYDRA kiosk with an enclosed eye-scan camera, a urine-analysis camera, a touchscreen, a water dispenser and a five-step flow.",
+      "kind": "photo",
+      "caption": "The HYDRA prototype."
+    },
+    "hydra-eye": {
+      "src": "Projects/Hydra/Image 1.png",
+      "widths": [
+        800,
+        1200,
+        1536
+      ],
+      "alt": "Eye-analysis diagram: live segmentation of iris, pupil, tear meniscus and lower lid margin, six extracted features, and hydrated versus dehydrated labels.",
+      "kind": "illustration",
+      "caption": "Eye-analysis stage: tear meniscus segmentation and extracted features."
+    },
+    "hyseis-map": {
+      "src": "Projects/HYSEIS/Picture1.png",
+      "widths": [
+        800,
+        1200,
+        1333
+      ],
+      "alt": "HYSEIS PH interface: a satellite basemap of the Philippines with a left control panel for magnitude, depth, time window, forecast or observed mode and map overlays, and an intensity legend.",
+      "kind": "screenshot",
+      "caption": "Main map view with magnitude, depth and time-window controls."
+    },
+    "hyseis-event": {
+      "src": "Projects/HYSEIS/Picture2.png",
+      "widths": [
+        800,
+        1200,
+        1600
+      ],
+      "alt": "HYSEIS PH Event Details panel listing epicentre address, magnitude, depth, nearest fault and a table of nearby towns with distance and intensity class.",
+      "kind": "screenshot",
+      "caption": "Event details for an example M6.2 scenario."
+    },
+    "hyseis-fault": {
+      "src": "Projects/HYSEIS/Picture3.png",
+      "widths": [
+        800,
+        850
+      ],
+      "alt": "Fault Finder view over Isabela province: municipality polygons on satellite imagery, a clicked point and a panel giving distance to the nearest fault line and its endpoints.",
+      "kind": "screenshot",
+      "caption": "Fault Finder: distance to the nearest mapped fault."
+    },
+    "hyseis-forecast": {
+      "src": "Projects/HYSEIS/Picture4.png",
+      "widths": [
+        800,
+        1200,
+        1593
+      ],
+      "alt": "HYSEIS PH forecast view for an example M6.9 scenario in the Visayas with a coloured intensity heatmap, an epicentre pop-up and a red fault line.",
+      "kind": "screenshot",
+      "caption": "Forecast view for an example M6.9 scenario."
+    },
+    "skin-gui": {
+      "src": "Projects/Skin Disease Detection using Matlab/Melonoma Detection Using Image Processing System.png",
+      "widths": [
+        625
+      ],
+      "alt": "MATLAB graphical interface titled Melanoma Detection Using Image Processing with panels for input image, grey conversion, enhancement, binarization, segmentation and classification, and Energy, Contrast and elapsed-time readouts.",
+      "kind": "screenshot",
+      "caption": "MATLAB interface showing one example run."
+    },
+    "helmet-1": {
+      "src": "Projects/Smart Helmet/Image 1.jpg",
+      "widths": [
+        800,
+        1280
+      ],
+      "alt": "Close view of a white open-face helmet with a cable leading to a small black pouch holding a backlit LCD module, on a wooden table.",
+      "kind": "photo",
+      "caption": "The prototype helmet and display pouch."
+    },
+    "helmet-2": {
+      "src": "Projects/Smart Helmet/Image 2.jpg",
+      "widths": [
+        678
+      ],
+      "alt": "Front view of a white open-face helmet with a clear visor next to a black pouch containing an LCD module, joined by a cable.",
+      "kind": "photo",
+      "caption": "Front view with the cable to the display pouch."
+    },
+    "award-siif": {
+      "src": "Projects/Awards/SIIF 2024 Silver Prize.jpg",
+      "widths": [
+        480,
+        800,
+        1125
+      ],
+      "kind": "photo",
+      "alt": "Two Filipino exhibitors in front of a Philippine flag at the Seoul International Invention Fair, one holding a medal case and the other a Silver Prize certificate, with the white Smart Helmet on a glass table between them.",
+      "caption": "The Smart Helmet exhibit at the Seoul International Invention Fair 2024, with the Silver Prize certificate and medal."
+    },
+    "award-nice": {
+      "src": "Projects/Awards/NICE 2024 SIBOL.jpg",
+      "widths": [
+        600,
+        1000,
+        1400
+      ],
+      "kind": "photo",
+      "alt": "Group photo of coaches, officials and three student awardees holding a ceremonial check and SIBOL certificates in front of the DOST-TAPI National Invention Contest and Exhibits backdrop.",
+      "caption": "The Lanna National High School team with coaches and DOST Region 02 officials at NICE 2024. Photo: DOST Region 02."
+    },
+    "award-presidential": {
+      "src": "Projects/Awards/NICE Presidential Awards 2024.jpg",
+      "widths": [
+        600,
+        1000
+      ],
+      "kind": "photo",
+      "alt": "Student awardees from Lanna National High School and officials on stage holding a ceremonial SIBOL Award check at the 2024 NICE Presidential Awards.",
+      "caption": "The SIBOL Award presented at the 2024 NICE Presidential Awards. Photo: DOST Region 02."
+    },
+    "award-nstf": {
+      "src": "Projects/Awards/NSTF 2026.jpg",
+      "widths": [
+        600,
+        1000,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Large group of coaches and student delegates posing in front of the 2026 National Science and Technology Fair stage backdrop.",
+      "caption": "Coaches and student delegates at the 2026 National Science and Technology Fair."
+    },
+    "award-global": {
+      "src": "Projects/Awards/Global Excellence Awards.jpg",
+      "widths": [
+        600,
+        1000,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Seven officials and educators standing on a decorated stage, one holding a certificate, in front of a screen reading Global Excellence Awards: Honoring International Achievements.",
+      "caption": "The awarding ceremony during the 50th Golden Founding Anniversary of DepEd Region 02."
+    },
+    "award-nstf-2025": {
+      "src": "Projects/Awards/NSTF 2025.jpg",
+      "widths": [
+        600,
+        1000,
+        1632
+      ],
+      "kind": "photo",
+      "alt": "Coaches and student delegates on stage with certificates and medals in front of the National Science and Technology Fair 2025 screen, Towards a Shared Vision.",
+      "caption": "Coaches and student delegates at the 2025 National Science and Technology Fair."
+    },
+    "award-nstf-vision": {
+      "src": "Projects/Awards/NSTF VISION booth.jpg",
+      "widths": [
+        600,
+        960
+      ],
+      "kind": "photo",
+      "alt": "Two student researchers standing beside the VISION project exhibit, a screen showing chest X-ray and brain scan images, at the National Science and Technology Fair.",
+      "caption": "Student researchers presenting VISION, the medical image classification project, at the National Science and Technology Fair."
+    },
+    "skill-a": {
+      "src": "Projects/Skills/A Embedded systems.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of a microcontroller board with a wireless signal, a cabled temperature and humidity sensor module, and a dashboard showing sensor readings."
+    },
+    "skill-b": {
+      "src": "Projects/Skills/B Robotics and automation.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of a robot arm placing boxes from a conveyor, with a control cabinet and a monitoring display."
+    },
+    "skill-c": {
+      "src": "Projects/Skills/C AI and computer vision.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of a camera feeding a neural network whose output shows detected objects on a monitor."
+    },
+    "skill-d": {
+      "src": "Projects/Skills/D Electronics design.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of a printed circuit board and a breadboard beside a monitor showing a circuit schematic and simulated waveforms."
+    },
+    "skill-e": {
+      "src": "Projects/Skills/E Programming and data.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of a laptop showing code, a database and a dashboard with charts."
+    },
+    "skill-f": {
+      "src": "Projects/Skills/F Modelling and research.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of a 3D mathematical surface, a fitted curve with residuals on a monitor, and a notebook with sketches."
+    },
+    "skill-g": {
+      "src": "Projects/Skills/G Tech stack.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "Illustration of stacked layers: a microchip, code, a database and a cloud."
+    },
+    "peter-cutout": {
+      "src": "Projects/Peter cutout trimmed.png",
+      "widths": [
+        320,
+        500
+      ],
+      "alpha": true,
+      "kind": "photo",
+      "alt": "Portrait of Engr. Peter John R. Bacani in a dark suit, white shirt and navy tie."
+    },
+    "skill-eng": {
+      "src": "Projects/Skills/G Engineering design.webp",
+      "widths": [
+        480,
+        800,
+        1200
+      ],
+      "kind": "illustration",
+      "alt": "A machined metal part, a 3D printer and an Arduino board wired to a breadboard on a dark surface, labelled Design and Engineering."
+    },
+    "phil-01": {
+      "src": "Projects/Philosophy/phil-01.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students working together at their desks in a classroom while the teacher stands at the front."
+    },
+    "phil-02": {
+      "src": "Projects/Philosophy/phil-02.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A student and a teacher working with a device during a hands on demonstration."
+    },
+    "phil-03": {
+      "src": "Projects/Philosophy/phil-03.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A teacher and a student seated across a table in a research discussion."
+    },
+    "phil-04": {
+      "src": "Projects/Philosophy/phil-04.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A large group of students and teachers holding research outputs in a classroom."
+    },
+    "phil-05": {
+      "src": "Projects/Philosophy/phil-05.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students laying out materials on the floor of an open corridor while a teacher watches."
+    },
+    "phil-06": {
+      "src": "Projects/Philosophy/phil-06.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students and teachers posing beside a research exhibit board."
+    },
+    "phil-07": {
+      "src": "Projects/Philosophy/phil-07.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A speaker at a podium presenting a slide about how artificial intelligence is created."
+    },
+    "phil-08": {
+      "src": "Projects/Philosophy/phil-08.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A presenter at a laptop in front of a large audience of students in a covered court."
+    },
+    "phil-09": {
+      "src": "Projects/Philosophy/phil-09.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Teachers and a student reviewing papers at a table during a school activity."
+    },
+    "phil-10": {
+      "src": "Projects/Philosophy/phil-10.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Researchers reviewing work on laptops at a table during a technical session."
+    },
+    "phil-11": {
+      "src": "Projects/Philosophy/phil-11.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students and teachers presenting student innovations at a colourful exhibit."
+    },
+    "phil-12": {
+      "src": "Projects/Philosophy/phil-12.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students and teachers in front of the Division Science and Technology Fair backdrop."
+    },
+    "phil-13": {
+      "src": "Projects/Philosophy/phil-13.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A team of students and teachers on a science fair stage."
+    },
+    "phil-14": {
+      "src": "Projects/Philosophy/phil-14.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students, teachers and coaches celebrating together on a science fair stage."
+    },
+    "phil-15": {
+      "src": "Projects/Philosophy/phil-15.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Students and coaches holding a school banner and certificates."
+    },
+    "phil-16": {
+      "src": "Projects/Philosophy/phil-16.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A group of students and teachers crossing their arms in a team pose on stage."
+    },
+    "phil-17": {
+      "src": "Projects/Philosophy/phil-17.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A team of students posing in a decorated school hallway."
+    },
+    "phil-18": {
+      "src": "Projects/Philosophy/phil-18.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Officials and teachers seated at a table during a regional science event."
+    },
+    "phil-19": {
+      "src": "Projects/Philosophy/phil-19.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A group on stage holding certificates at a regional event."
+    },
+    "phil-20": {
+      "src": "Projects/Philosophy/phil-20.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "A group photo of students and officials at a regional research event."
+    },
+    "phil-21": {
+      "src": "Projects/Philosophy/phil-21.jpg",
+      "widths": [
+        640,
+        1100,
+        1600
+      ],
+      "kind": "photo",
+      "alt": "Teachers and officials holding a ceremonial cheque at an award ceremony."
+    },
+    "phil-sirpj": {
+      "src": "Projects/Philosophy/sir-pj.webp",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Sir PJ in a cream barong standing in front of a green chalkboard decorated with chalk drawings and his name."
+    },
+    "phil-fest-01": {
+      "src": "Projects/Philosophy/fest-01.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Teachers and a student examining a white helmet prototype with a small display at an exhibit booth."
+    },
+    "phil-fest-02": {
+      "src": "Projects/Philosophy/fest-02.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Three students in black blazers holding a helmet and two electronic prototypes in front of the National Youth Science, Technology, and Innovation Festival backdrop."
+    },
+    "phil-fest-03": {
+      "src": "Projects/Philosophy/fest-03.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A wheeled robot platform with a battery and two motors on a display table beside robotics kits."
+    },
+    "phil-fest-04": {
+      "src": "Projects/Philosophy/fest-04.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A tall humanoid robot built from perforated metal parts and tank tracks, with glowing eyes, standing at an exhibit."
+    },
+    "phil-fest-05": {
+      "src": "Projects/Philosophy/fest-05.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A 3D printer printing small purple figures on a display stand."
+    },
+    "phil-fest-06": {
+      "src": "Projects/Philosophy/fest-06.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A clear display case mounting environmental sensors, an LED panel and an LCD on one board."
+    },
+    "phil-fest-07": {
+      "src": "Projects/Philosophy/fest-07.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Robotics kits, a small wheeled robot and Arduino Pro microcontroller boards on an exhibit table."
+    },
+    "phil-fest-08": {
+      "src": "Projects/Philosophy/fest-08.png",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A 3D printer printing an orange patterned vase, with its touchscreen beside it."
+    },
+    "phil-fest-09": {
+      "src": "Projects/Philosophy/fest-09.png",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A student working on a 3D printer on a table in a classroom."
+    },
+    "phil-fin-01": {
+      "src": "Projects/Philosophy/fin-01.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A student presenting beside a Finite Mathematics booth with tessellation art, posters and a paper pop up model."
+    },
+    "phil-fin-02": {
+      "src": "Projects/Philosophy/fin-02.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Teachers listening as students present at a Finite Mathematics booth along a school corridor."
+    },
+    "phil-fin-03": {
+      "src": "Projects/Philosophy/fin-03.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Students, teachers and a Best Booth certificate in front of the Finite Mathematics Group 2 booth."
+    },
+    "phil-fin-04": {
+      "src": "Projects/Philosophy/fin-04.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Paper pop up cube models and activity posters on golden ratio, Fibonacci and tessellation laid out on a table."
+    },
+    "phil-fin-05": {
+      "src": "Projects/Philosophy/fin-05.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Students standing at the Group 2 booth beside posters on geometry, matrices and a pop up cube model."
+    },
+    "phil-cls-01": {
+      "src": "Projects/Philosophy/cls-01.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "Students solving a linear Diophantine equation on the chalkboard while the teacher points to the solution and examples show on the screen."
+    },
+    "phil-cls-02": {
+      "src": "Projects/Philosophy/cls-02.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A teacher guiding students seated around a table with wooden dice and notebooks in a classroom."
+    },
+    "phil-cls-03": {
+      "src": "Projects/Philosophy/cls-03.jpg",
+      "widths": [
+        640,
+        1100,
+        1500
+      ],
+      "kind": "photo",
+      "alt": "A teacher leaning over a table as students work with wooden dice and notebooks."
+    },
+    "cert-01": {
+      "src": "Projects/Awards/certs/cert-01.jpg",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Certificate of Recognition from DOST Region II and TAPI naming Peter John R. Bacani as coach for the Outstanding SIBOL Award, High School, Regional Winner, 2019."
+    },
+    "cert-02": {
+      "src": "Projects/Awards/certs/cert-02.jpg",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Certificate of Recognition from DOST-TAPI for the SIBOL 1st Prize, Outstanding Creative Research, High School Category, at the 2024 National Invention Contest and Exhibits."
+    },
+    "cert-03": {
+      "src": "Projects/Awards/certs/cert-03.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "DepEd Region II Certificate of Recognition to Peter John R. Bacani as coach of the first placer in STEMIE, team category, at the 2025 Regional Science and Technology Fair."
+    },
+    "cert-04": {
+      "src": "Projects/Awards/certs/cert-04.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "DepEd Region II Certificate of Recognition to Peter John R. Bacani as coach of the first placer in Robotics and Intelligent Machines, team category, at the 2025 Regional Science and Technology Fair."
+    },
+    "cert-05": {
+      "src": "Projects/Awards/certs/cert-05.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Schools Division of Isabela Certificate of Recognition naming Peter John R. Bacani Best Presenter (Coach) in the Tuklas Research Project, Mathematics and Computational Science category, 2023."
+    },
+    "cert-06": {
+      "src": "Projects/Awards/certs/cert-06.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "DepEd Certificate of Participation to Peter John R. Bacani, Finalist and Coach, at the National Science and Technology Fair 2025 in Quezon City."
+    },
+    "cert-07": {
+      "src": "Projects/Awards/certs/cert-07.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Schools Division of Isabela Certificate of Recognition naming Peter John R. Bacani First Place (Coach) in Tuklas, Mathematics and Computational Science category, 2023."
+    },
+    "cert-08": {
+      "src": "Projects/Awards/certs/cert-08.jpg",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "DOST-TAPI Certificate of Participation to Peter John R. Bacani as adviser of a SIBOL Award entry, high school level, at the 2020 National Invention Contest and Exhibits."
+    },
+    "cert-09": {
+      "src": "Projects/Awards/certs/cert-09.jpg",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Certificate of Recognition from the Municipality of Tumauini naming Engr. Peter John Bacani of Lanna National High School Outstanding Innovator, December 2023."
+    },
+    "cert-10": {
+      "src": "Projects/Awards/certs/cert-10.jpg",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Certificate of Recognition from the Municipality of Tumauini to Peter John R. Bacani as coach of the Best Young Inventor Awardee at the Seoul International Invention Fair 2024."
+    },
+    "cert-11": {
+      "src": "Projects/Awards/certs/cert-11.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "DepEd Region II Certificate of Recognition to Engr. Peter John R. Bacani for exemplary international representation at the Seoul International Invention Fair, July 2025."
+    },
+    "cert-12": {
+      "src": "Projects/Awards/certs/cert-12.jpg",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Lanna National High School Certificate of Recognition naming Engr. Peter John R. Bacani Most Outstanding Teacher, October 2019."
+    },
+    "cert-13": {
+      "src": "Projects/Awards/certs/cert-13.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Individual Performance Commitment and Review Form summary sheet for school year 2024 to 2025 showing a final rating of 4.962, Outstanding."
+    },
+    "cert-14": {
+      "src": "Projects/Awards/certs/cert-14.webp",
+      "widths": [
+        520,
+        900,
+        1600
+      ],
+      "kind": "screenshot",
+      "alt": "Official electronic IPCRF tool summary for school year 2025 to 2026 showing a final rating of 5.000, Outstanding."
+    }
+  },
+  "videos": {
+    "retina-demo": {
+      "src": "Projects/Retina Fractal Analysis/Retina.mp4",
+      "title": "RETINA walkthrough",
+      "publish": true
+    },
+    "vision-demo": {
+      "src": "Projects/Medical Images Classification/Vision-Medical Imaging System.mp4",
+      "title": "VISION demonstration",
+      "publish": true
+    },
+    "safaris-demo": {
+      "src": "Projects/Farming Guide Using AI/Spatiotemporal Analysis Farming Guide Using Using AI - Powerd Sysyem.mp4",
+      "title": "SAFARIS demonstration",
+      "publish": true
+    },
+    "school-system-demo": {
+      "src": "Projects/Information and Management System/Web-based Information Management System.mp4",
+      "title": "System demonstration",
+      "publish": true,
+      "poster_at": 0.3
+    },
+    "helmet-news": {
+      "src": "Projects/Smart Helmet/Lanna High School students in Isabela develop smart helmet.mp4",
+      "title": "Smart Helmet news feature",
+      "publish": true,
+      "poster_at": 0.52
+    }
+  },
+  "documents": {
+    "resume": {
+      "src": "Resume.pdf",
+      "out": "Peter-John-Bacani-Resume.pdf",
+      "title": "Résumé",
+      "publish": false,
+      "note": "Rendered to page images (view-only modal). The PDF itself is not published."
+    },
+    "doc-retina": {
+      "src": "Projects/Retina Fractal Analysis/RETINA description.pdf",
+      "out": "retina-project-description.pdf",
+      "publish": true
+    },
+    "doc-hyseis": {
+      "src": "Projects/HYSEIS/HYSEIS  project Description.pdf",
+      "out": "hyseis-project-description.pdf",
+      "publish": true
+    },
+    "doc-safaris": {
+      "src": "Projects/Farming Guide Using AI/The Spatiotemporal Analysis Farming Guide Using AI.pdf",
+      "out": "safaris-project-description.pdf",
+      "publish": true
+    },
+    "doc-vision": {
+      "src": "Projects/Medical Images Classification/Vision-Medical Imaging System Description.pdf",
+      "out": "vision-project-description.pdf",
+      "publish": true
+    },
+    "doc-skin": {
+      "src": "Projects/Skin Disease Detection using Matlab/Skin Disease Sytem Description.pdf",
+      "out": "skin-disease-project-description.pdf",
+      "publish": true
+    },
+    "doc-school-system": {
+      "src": "Projects/Information and Management System/Web-based Information Management System Description.pdf",
+      "out": "school-system-project-description.pdf",
+      "publish": true
+    },
+    "doc-hydra": {
+      "src": "Projects/Hydra/Hydra Project Description.docx",
+      "out": "hydra-project-description.pdf",
+      "publish": true,
+      "convert": true,
+      "title": "HYDRA: project description"
+    },
+    "doc-helmet": {
+      "src": "Projects/Smart Helmet/Smart Helmet description.docx",
+      "out": "smart-helmet-project-description.pdf",
+      "publish": true,
+      "convert": true,
+      "title": "Smart Helmet: project description"
+    },
+    "ldm": {
+      "src": "Projects/Learning Delivery Modalities/PJ LDM2.pdf",
+      "title": "Learning Delivery Modalities portfolio",
+      "publish": false,
+      "note": "Rendered to page images (view-only modal). The PDF itself is not published."
+    }
+  }
+}
